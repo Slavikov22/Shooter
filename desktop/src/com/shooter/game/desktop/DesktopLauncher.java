@@ -7,6 +7,9 @@ import com.shooter.game.ShooterGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.width = ShooterGame.WIDTH;
+		config.height = ShooterGame.HEIGHT;
+		config.title = ShooterGame.TITLE;
 		new LwjglApplication(new ShooterGame(), config);
 	}
 }
