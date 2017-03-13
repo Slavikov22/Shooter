@@ -5,6 +5,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
+import com.badlogic.gdx.physics.box2d.World;
 import com.shooter.game.model.Person;
 
 /**
@@ -14,26 +16,39 @@ public class PersonView {
     private final int TEXTURE_CENTER_X = 11;
     private final int TEXTURE_CENTER_Y = 14;
 
-    protected Person person;
+    private Person person;
 
-    protected OrthographicCamera camera;
+    private OrthographicCamera camera;
 
-    protected SpriteBatch spriteBatch;
-    protected Sprite sprite;
+    private SpriteBatch spriteBatch;
+    private Sprite sprite;
 
-    protected Texture texture;
+    private Box2DDebugRenderer renderer;
 
-    public PersonView(Person person){
+    private World world;
+
+    PersonView(Person person, World world){
         this.person = person;
+        this.world = world;
+
+        renderer = new Box2DDebugRenderer();
 
         spriteBatch = new SpriteBatch();
     }
 
-    public void setTexture(Texture texture){
-        this.texture = texture;
+    public void render(){
+        renderer.render(world, camera.combined);
 
+        spriteBatch.begin();
+        sprite.setX(person.getPosition().x - sprite.getOriginX());
+        sprite.setY(person.getPosition().y - sprite.getOriginY());
+        sprite.setRotation(person.getRotation());
+        sprite.draw(spriteBatch);
+        spriteBatch.end();
+    }
+
+    void initSprite(Texture texture){
         sprite = new Sprite(texture);
-        sprite.setCenter(TEXTURE_CENTER_X, TEXTURE_CENTER_Y);
         sprite.setOrigin(TEXTURE_CENTER_X, TEXTURE_CENTER_Y);
     }
 
@@ -43,13 +58,5 @@ public class PersonView {
 
     public OrthographicCamera getCamera(){
         return camera;
-    }
-
-    public void render(){
-        spriteBatch.begin();
-        sprite.setCenter(person.getX(), person.getY());
-        sprite.setRotation(person.getRotation());
-        sprite.draw(spriteBatch);
-        spriteBatch.end();
     }
 }
