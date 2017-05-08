@@ -8,7 +8,7 @@ import com.badlogic.gdx.physics.box2d.*;
  */
 public abstract class Person {
     public final static float RADIUS = 0.6f;
-    public final static float DAMPING = 0.1f;
+    public final static float DAMPING = 30.0f;
 
     private Fixture physicsFixture;
     public Body body;

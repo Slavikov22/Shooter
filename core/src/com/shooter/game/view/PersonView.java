@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.shooter.game.model.Person;
@@ -41,8 +42,9 @@ public class PersonView {
         renderer.render(world, camera.combined);
 
         spriteBatch.begin();
-        sprite.setX(person.getPosition().x - sprite.getOriginX());
-        sprite.setY(person.getPosition().y - sprite.getOriginY());
+        Vector3 position = camera.project(new Vector3(person.getPosition(), 0));
+        sprite.setX(position.x - sprite.getOriginX());
+        sprite.setY(position.y - sprite.getOriginY());
         sprite.setRotation(person.getAngle());
         sprite.draw(spriteBatch);
         spriteBatch.end();

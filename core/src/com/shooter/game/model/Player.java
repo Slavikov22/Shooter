@@ -10,7 +10,7 @@ import com.badlogic.gdx.physics.box2d.World;
  */
 public class Player extends Person {
 
-    public final float FORCE = 1.0f;
+    private final float FORCE = 150.0f;
 
     private final static Vector2 START_POSITION = new Vector2(2.0f,2.0f);
 

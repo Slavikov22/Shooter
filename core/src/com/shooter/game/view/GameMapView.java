@@ -23,7 +23,8 @@ public class GameMapView {
         this.gameMap = gameMap;
         this.camera = camera;
 
-        mapRenderer = new OrthogonalTiledMapRenderer(this.gameMap.getMap());
+        // TODO: edit unitScale
+        mapRenderer = new OrthogonalTiledMapRenderer(this.gameMap.getMap(), 0.04f);
     }
 
     public void render(){
