@@ -2,7 +2,7 @@ package com.shooter.game.screen;
 
 import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.shooter.game.controller.CameraController;
 import com.shooter.game.model.GameWorld;
 
 /**
@@ -10,24 +10,21 @@ import com.shooter.game.model.GameWorld;
  */
 public class GameScreen implements Screen {
 
-    private OrthographicCamera camera;
+    private CameraController cameraController;
+    private GameWorld gameWorld;
 
     private InputMultiplexer multiplexer;
 
-    private GameWorld world;
-
-    public GameScreen(){
-        camera = new OrthographicCamera();
-        camera.setToOrtho(false);
-        camera.update();
-
-        world = new GameWorld();
-        world.setCamera(camera);
-        world.initPlayer();
-        world.initGameMap();
+    public GameScreen(int width, int height){
+        cameraController = new CameraController(width, height);
+        gameWorld = new GameWorld(cameraController.getCamera());
 
         multiplexer = new InputMultiplexer();
-        multiplexer.setProcessors(world.getProcessors());
+        multiplexer.addProcessor(cameraController);
+
+        for (InputProcessor processor: gameWorld.getInputProcessors()) {
+            multiplexer.addProcessor(processor);
+        }
 
         Gdx.input.setInputProcessor(multiplexer);
     }
@@ -42,8 +39,8 @@ public class GameScreen implements Screen {
         Gdx.gl.glClearColor(0,0,0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        world.update();
-        world.render();
+        gameWorld.update();
+        gameWorld.render();
     }
 
     @Override

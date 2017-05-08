@@ -3,10 +3,13 @@ package com.shooter.game.controller;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.physics.box2d.World;
 import com.shooter.game.model.Player;
 import com.shooter.game.view.PersonView;
+import com.shooter.game.view.PlayerView;
 
 /**
  * Created by miraj on 10.3.17.
@@ -15,24 +18,33 @@ public class PlayerController extends InputAdapter {
     private Player player;
     private PersonView view;
 
-    public PlayerController(Player player, PersonView view){
-        this.player = player;
-        this.view = view;
+    private OrthographicCamera camera;
+
+    public PlayerController(World world, OrthographicCamera camera){
+        player = new Player(world);
+        view = new PlayerView(player, world, camera);
+
+        this.camera = camera;
+    }
+
+    public void render(){
+        player.update();
+        view.render();
     }
 
     public boolean keyDown(int keycode){
-        switch (keycode){
+        switch (keycode) {
             case Input.Keys.W:
-                player.getVelocity().y = player.SPEED;
-                break;
-            case Input.Keys.S:
-                player.getVelocity().y = -player.SPEED;
+                player.isMovedUp = true;
                 break;
             case Input.Keys.A:
-                player.getVelocity().x = -player.SPEED;
+                player.isMovedLeft = true;
+                break;
+            case Input.Keys.S:
+                player.isMovedDown = true;
                 break;
             case Input.Keys.D:
-                player.getVelocity().x = player.SPEED;
+                player.isMovedRight = true;
                 break;
         }
 
@@ -42,16 +54,16 @@ public class PlayerController extends InputAdapter {
     public boolean keyUp(int keycode){
         switch (keycode){
             case Input.Keys.W:
-                player.getVelocity().y = 0;
-                break;
-            case Input.Keys.S:
-                player.getVelocity().y = 0;
+                player.isMovedUp = false;
                 break;
             case Input.Keys.A:
-                player.getVelocity().x = 0;
+                player.isMovedLeft = false;
+                break;
+            case Input.Keys.S:
+                player.isMovedDown = false;
                 break;
             case Input.Keys.D:
-                player.getVelocity().x = 0;
+                player.isMovedRight = false;
                 break;
         }
 
@@ -61,9 +73,9 @@ public class PlayerController extends InputAdapter {
     public boolean mouseMoved(int x, int y){
 
         Vector3 mousePos = new Vector3(x, y, 0);
-        view.getCamera().unproject(mousePos);
+        camera.unproject(mousePos);
 
-        player.setRotation(getAngle(mousePos.x, mousePos.y));
+        player.setAngle(getAngle(mousePos.x, mousePos.y));
 
         return false;
     }

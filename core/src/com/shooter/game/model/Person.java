@@ -7,38 +7,67 @@ import com.badlogic.gdx.physics.box2d.*;
  * Created by miraj on 5.3.17.
  */
 public abstract class Person {
-    public final static float SPEED = 100;
-    public final static int RADIUS = 30;
+    public final static float RADIUS = 0.6f;
+    public final static float DAMPING = 0.1f;
 
     private Fixture physicsFixture;
-    private Body body;
+    public Body body;
 
-    private float rotation;
-
-    private Vector2 position;
-    private Vector2 velocity;
-
-    Person(Vector2 position){
-        this.position = position;
+    public Person(World world){
+        initPhysics(world);
     }
 
     public void update(){
-        body.setLinearVelocity(velocity);
-        position = body.getPosition();
+        //body.setLinearVelocity(velocity);
+        //position = body.getPosition();
     }
 
     public Vector2 getVelocity(){
-        return velocity;
+        return body.getLinearVelocity();
     }
 
-    public void initPhysics(World world){
-        velocity = new Vector2(0,0);
+    public void setVelocity(Vector2 velocity){
+        body.setLinearVelocity(velocity);
+    }
 
+    public void setVelocity(float x, float y){
+        setVelocity(new Vector2(x, y));
+    }
+
+    public Vector2 getPosition(){
+        return body.getPosition();
+    }
+
+    public void setPosition(Vector2 position){
+        body.getPosition().set(position);
+    }
+
+    public void setPosition(float x, float y){
+        setPosition(new Vector2(x, y));
+    }
+
+    public float getAngle(){
+        return body.getAngle();
+    }
+
+    public void setAngle(float angle){
+        body.setTransform(body.getPosition(), angle);
+    }
+
+    public float getMass(){
+        return body.getMassData().mass;
+    }
+
+    public void applyForce(float forceX, float forceY){
+        body.applyForceToCenter(forceX, forceY, true);
+    }
+
+    private void initPhysics(World world){
         BodyDef bd = new BodyDef();
         bd.type = BodyDef.BodyType.DynamicBody;
+        bd.linearDamping = DAMPING;
+
         body = world.createBody(bd);
-        body.setTransform(position.x, position.y, 0);
-        body.setFixedRotation(true);
 
         CircleShape circle = new CircleShape();
         circle.setRadius(RADIUS);
@@ -46,17 +75,5 @@ public abstract class Person {
         circle.dispose();
 
         body.setBullet(true);
-    }
-
-    public Vector2 getPosition(){
-        return position;
-    }
-
-    public float getRotation(){
-        return rotation;
-    }
-
-    public void setRotation(float degrees){
-        this.rotation = degrees;
     }
 }

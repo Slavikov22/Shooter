@@ -15,54 +15,38 @@ import com.shooter.game.view.PlayerView;
  * Created by miraj on 13.3.17.
  */
 public class GameWorld {
+    private final static float TIME_STEP = 1.0f / 60.0f;
+
+    private final static int VELOCITY_ITERATIONS = 10;
+    private final static int POSITION_ITERATIONS = 10;
+
     private World world;
-
-    private Player player;
-    private PlayerView playerView;
-    private PlayerController playerController;
-
-    private GameMapView gameMapView;
-    private GameMapController gameMapController;
 
     private OrthographicCamera camera;
 
-    public GameWorld(){
+    private PlayerController playerController;
+
+    private GameMapController gameMapController;
+
+    public GameWorld(OrthographicCamera camera){
+        this.camera = camera;
+
         world = new World(new Vector2(0,0), false);
+
+        playerController = new PlayerController(world, this.camera);
+        gameMapController = new GameMapController(this.camera);
     }
 
     public void update(){
-        world.step(1.0f / 60.0f, 10, 10);
-
-        player.update();
+        world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
     }
 
     public void render(){
-        gameMapView.render();
-        playerView.render();
+        gameMapController.render();
+        playerController.render();
     }
 
-    public void initPlayer(){
-        player = new Player();
-        player.initPhysics(world);
-
-        playerView = new PlayerView(player, world);
-        playerView.setCamera(camera);
-
-        playerController = new PlayerController(player, playerView);
-    }
-
-    public void initGameMap(){
-        gameMapView = new GameMapView();
-        gameMapView.setCamera(camera);
-
-        gameMapController = new GameMapController(gameMapView);
-    }
-
-    public void setCamera(OrthographicCamera camera){
-        this.camera = camera;
-    }
-
-    public Array<InputProcessor> getProcessors(){
+    public Array<InputProcessor> getInputProcessors(){
         Array<InputProcessor> processors = new Array<InputProcessor>();
         processors.add(playerController);
         processors.add(gameMapController);

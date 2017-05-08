@@ -10,6 +10,7 @@ public class DesktopLauncher {
 		config.width = ShooterGame.WIDTH;
 		config.height = ShooterGame.HEIGHT;
 		config.title = ShooterGame.TITLE;
+
 		new LwjglApplication(new ShooterGame(), config);
 	}
 }

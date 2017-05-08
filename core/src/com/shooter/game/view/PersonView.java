@@ -27,9 +27,10 @@ public class PersonView {
 
     private World world;
 
-    PersonView(Person person, World world){
+    PersonView(Person person, World world, OrthographicCamera camera){
         this.person = person;
         this.world = world;
+        this.camera = camera;
 
         renderer = new Box2DDebugRenderer();
 
@@ -42,7 +43,7 @@ public class PersonView {
         spriteBatch.begin();
         sprite.setX(person.getPosition().x - sprite.getOriginX());
         sprite.setY(person.getPosition().y - sprite.getOriginY());
-        sprite.setRotation(person.getRotation());
+        sprite.setRotation(person.getAngle());
         sprite.draw(spriteBatch);
         spriteBatch.end();
     }
@@ -50,13 +51,5 @@ public class PersonView {
     void initSprite(Texture texture){
         sprite = new Sprite(texture);
         sprite.setOrigin(TEXTURE_CENTER_X, TEXTURE_CENTER_Y);
-    }
-
-    public void setCamera(OrthographicCamera camera){
-        this.camera = camera;
-    }
-
-    public OrthographicCamera getCamera(){
-        return camera;
     }
 }

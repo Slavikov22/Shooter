@@ -1,10 +1,12 @@
 package com.shooter.game.view;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Vector3;
+import com.shooter.game.model.GameMap;
 
 import java.util.Dictionary;
 
@@ -12,23 +14,20 @@ import java.util.Dictionary;
  * Created by miraj on 9.3.17.
  */
 public class GameMapView {
-    private TiledMap map;
+    private GameMap gameMap;
+
     private OrthogonalTiledMapRenderer mapRenderer;
     private OrthographicCamera camera;
 
-    public GameMapView(){
-        map = new TmxMapLoader().load("TileMaps/start.tmx");
+    public GameMapView(GameMap gameMap, OrthographicCamera camera){
+        this.gameMap = gameMap;
+        this.camera = camera;
 
-        mapRenderer = new OrthogonalTiledMapRenderer(map);
+        mapRenderer = new OrthogonalTiledMapRenderer(this.gameMap.getMap());
     }
 
     public void render(){
         mapRenderer.setView(camera);
         mapRenderer.render();
     }
-
-    public void setCamera(OrthographicCamera camera){
-        this.camera = camera;
-    }
-
 }
