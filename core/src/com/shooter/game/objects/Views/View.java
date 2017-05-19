@@ -1,0 +1,42 @@
+package com.shooter.game.objects.Views;
+
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector3;
+import com.shooter.game.objects.GameObject;
+
+/**
+ * Created by miraj on 19.5.17.
+ */
+public class View {
+    protected GameObject object;
+    protected Sprite sprite;
+    protected SpriteBatch spriteBatch;
+    protected OrthographicCamera camera;
+
+    public View(GameObject object, OrthographicCamera camera){
+        this.object = object;
+        this.camera = camera;
+
+        this.sprite = new Sprite();
+        this.spriteBatch = new SpriteBatch();
+    }
+
+    public void render(){
+        Vector3 position = camera.project(new Vector3(object.getPosition(), 0));
+        sprite.setX(position.x - sprite.getOriginX());
+        sprite.setY(position.y - sprite.getOriginY());
+        sprite.setRotation(object.getAngle());
+
+        spriteBatch.begin();
+        sprite.draw(spriteBatch);
+        spriteBatch.end();
+    }
+
+    public void setSprite(Texture texture){
+        sprite.setTexture(texture);
+        sprite.setOriginCenter();
+    }
+}
