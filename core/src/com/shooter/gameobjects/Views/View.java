@@ -1,11 +1,11 @@
-package com.shooter.game.objects.Views;
+package com.shooter.gameobjects.Views;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector3;
-import com.shooter.game.objects.GameObject;
+import com.shooter.gameobjects.GameObject;
 
 /**
  * Created by miraj on 19.5.17.

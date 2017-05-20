@@ -2,93 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3238d168-bab4-4036-a12d-527ee5948e12" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Enemy1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Enemy2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Enemy3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Enemy4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Player1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Player2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Player3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Player4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Player5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/Player6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/TileMaps/start.tmx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Бетон 2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Дорога 2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Дорога 3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Дорога 4.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Дорога 5.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Дорога 6.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Дорога 7.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Дорога.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Забор 2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Забор.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Метал.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/Метал2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/крыша 1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/крыша 2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/крыша 3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/крыша 4.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/крыша 5.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/крыша 6.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/крыша 7.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ПРОЧИЕ/крыша.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СПРАЙТЫ/aztecroof.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СПРАЙТЫ/inferno1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СПРАЙТЫ/rescueheli_up.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СПРАЙТЫ/rotor.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СПРАЙТЫ/ventcover.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СПРАЙТЫ/wagon1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СПРАЙТЫ/wagon2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СПРАЙТЫ/wagon3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СТЕНЫ/Стена 3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СТЕНЫ/Стена 4.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СТЕНЫ/стена.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/СТЕНЫ/стена2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик 2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик 3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик 4.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик 5.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик 5_1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик 5_2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик 6.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик 6_1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик 6_2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/ЯЩИКИ/Ящик.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/ShooterGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/controller/CameraController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/controller/GameMapController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/controller/PlayerController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/model/GameMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/model/GameWorld.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/model/Person.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/model/Player.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/screen/GameScreen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/view/GameMapView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/view/PersonView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/view/PlayerView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/controller/GameMapController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/controller/PlayerController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/model/GameMap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/model/Person.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/model/Player.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/view/GameMapView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/view/PersonView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/view/PlayerView.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/ShooterGame.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/ShooterGame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/controller/CameraController.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/game/camera/CameraController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/model/GameWorld.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/game/GameWorld.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/screen/GameScreen.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/screens/GameScreen.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/GameWorld.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/camera/CameraController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/objects/DynamicGameObject.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/objects/GameObject.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/objects/Person.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/objects/Player.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/objects/StaticGameObject.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/objects/Views/PlayerView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/objects/Views/View.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/player/PlayerController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/camera/CameraController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/objects/DynamicGameObject.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/GameWorld.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/gameworld/GameWorld.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/objects/GameObject.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/gameobjects/GameObject.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/objects/Person.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/gameobjects/Person.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/objects/Player.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/gameobjects/Player.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/objects/StaticGameObject.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/gameobjects/StaticGameObject.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/objects/Views/PlayerView.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/gameobjects/Views/PlayerView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/objects/Views/View.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/gameobjects/Views/View.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/player/PlayerController.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/player/PlayerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/build/libs/desktop-1.0.jar" afterPath="$PROJECT_DIR$/desktop/build/libs/desktop-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/map/GameMap.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/shooter/game/map/GameMap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/helpers/MathHelper.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/shooter/helpers/MathHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/shooter/screens/GameScreen.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/shooter/screens/GameScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/android.iml" afterPath="$PROJECT_DIR$/android/android.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/src/com/shooter/game/AndroidLauncher.java" afterPath="$PROJECT_DIR$/android/src/com/shooter/game/AndroidLauncher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/src/com/shooter/game/desktop/DesktopLauncher.java" afterPath="$PROJECT_DIR$/desktop/src/com/shooter/game/desktop/DesktopLauncher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/assets/maps/Map.tmx" afterPath="$PROJECT_DIR$/android/assets/maps/Map.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/shooter/game/map/GameMap.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/game/map/GameMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/shooter/helpers/MathHelper.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/helpers/MathHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/shooter/screens/GameScreen.java" afterPath="$PROJECT_DIR$/core/src/com/shooter/screens/GameScreen.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -116,57 +63,103 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/GameObject.java">
+        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="378">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/screens/GameScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#show#0;class#GameScreen#0" expanded="false" />
+                <element signature="method#resize#0;class#GameScreen#0" expanded="false" />
+                <element signature="method#hide#0;class#GameScreen#0" expanded="false" />
+                <element signature="method#pause#0;class#GameScreen#0" expanded="false" />
+                <element signature="method#resume#0;class#GameScreen#0" expanded="false" />
+                <element signature="method#dispose#0;class#GameScreen#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/Player.java">
+        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state relative-caret-position="357">
+              <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
+                <element signature="e#458#459#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameMap.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/map/GameMap.java">
+      <file leaf-file-name="ShooterGame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/ShooterGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="239">
+              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#292#293#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/Person.java">
+      <file leaf-file-name="PlayerView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/Views/PlayerView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state relative-caret-position="378">
+              <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/Views/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="GameWorld.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/GameWorld.java">
+        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameworld/GameWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+            <state relative-caret-position="365">
+              <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1442#1458#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameRenderer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameworld/GameRenderer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#637#638#0" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2485,13 +2478,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/src/com/shooter/model/Person.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/game/degub/LogFile.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/game/controller/GameController.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/game/controller/OrthographicCameraController.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/game/ShooterGame.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/game/controller/GameWorldController.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/game/view/PersonView.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/model/GameObject.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/model/Object/Box.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/screen/GameScreen.java" />
@@ -2513,25 +2499,36 @@
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/Bodies/DynamicGameObject.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/Bodies/StaticGameObject.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/model/Person.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/helpers/MathHelper.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/screens/GameScreen.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/ShooterGame.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/view/PlayerView.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/Views/View.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/game/camera/CameraController.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/model/GameMap.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/Views/PlayerView.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/view/GameMapView.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/game/map/GameMap.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/StaticGameObject.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/DynamicGameObject.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/Person.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/Player.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/screens/GameScreen.java" />
-        <option value="$PROJECT_DIR$/core/src/com/shooter/game/GameWorld.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/player/PlayerController.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/GameObject.java" />
         <option value="$PROJECT_DIR$/core/src/com/shooter/game/objects/Wagon.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/game/map/GameMap.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/game/GameWorld.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/game/GameRenderer.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/game/camera/CameraController.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/gameworld/GameRenderer.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/gameobjects/Person.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/gameobjects/DynamicGameObject.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/gameobjects/StaticGameObject.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/player/PlayerController.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/gameobjects/Views/PlayerView.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/gameobjects/Views/View.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/gameobjects/GameObject.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/gameworld/GameWorld.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/screens/GameScreen.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/gameobjects/Player.java" />
+        <option value="$PROJECT_DIR$/core/src/com/shooter/helpers/MathHelper.java" />
       </list>
     </option>
   </component>
@@ -2705,62 +2702,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shooter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shooter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shooter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shooter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shooter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shooter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="player" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2787,11 +2728,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="objects" />
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2817,15 +2754,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="objects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Views" />
+              <option name="myItemId" value="gameworld" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2851,41 +2780,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
+              <option name="myItemId" value="gameobjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shooter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shooter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shooter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shooter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shooter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shooter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="camera" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3396,12 +3317,13 @@
       <workItem from="1495124413566" duration="2779000" />
       <workItem from="1495182260919" duration="11022000" />
       <workItem from="1495209687451" duration="7985000" />
-      <workItem from="1495225160496" duration="6507000" />
+      <workItem from="1495225160496" duration="6630000" />
+      <workItem from="1495290496229" duration="21577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147427000" />
+    <option name="totallyTimeSpent" value="169127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -3433,7 +3355,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23342317" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -3442,6 +3363,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -3452,7 +3374,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="42" />
+      <option name="time" value="75" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3461,27 +3383,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/maps/tiled/TmxMapLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="41" column="45" lean-forward="true" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/maps/tiled/AtlasTmxMapLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/maps/MapProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-471">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/maps/tiled/TiledMapTileSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -3557,26 +3458,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-box2d/1.9.5/75c262f9ca8e522063388daf21c2a91a60724a1b/gdx-box2d-1.9.5-sources.jar!/com/badlogic/gdx/physics/box2d/Body.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="105" column="19" lean-forward="false" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/PlayerController.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/InputProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="37" column="39" lean-forward="true" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop/src/com/shooter/game/desktop/DesktopLauncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3589,133 +3475,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/helpers/MathHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/Views/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/model/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/controller/PlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-872">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/view/PersonView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/view/PlayerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/ShooterGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#461#462#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/camera/CameraController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="method#setPosition#0;class#CameraController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/Views/PlayerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/model/GameMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/view/GameMapView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/controller/GameMapController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/model/Person.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/model/Player.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/controller/PlayerController.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/view/PersonView.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/view/PlayerView.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/map.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/model/GameMap.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/view/GameMapView.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/controller/GameMapController.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/InputMultiplexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -3728,10 +3496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="47" column="52" lean-forward="false" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-          <folding>
-            <element signature="e#2531#2532#0" expanded="false" />
-            <element signature="e#2559#2560#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3739,15 +3503,161 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="138" column="57" lean-forward="false" selection-start-line="138" selection-start-column="57" selection-end-line="138" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/Wagon.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/ApplicationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/camera/CameraController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/map/GameMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop/src/com/shooter/game/desktop/DesktopLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-box2d/1.9.5/75c262f9ca8e522063388daf21c2a91a60724a1b/gdx-box2d-1.9.5-sources.jar!/com/badlogic/gdx/physics/box2d/Body.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="179" column="28" lean-forward="false" selection-start-line="179" selection-start-column="28" selection-end-line="179" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#1522#1523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.9.5/746874b7c5ec7d49eae06d891417af0f7dd29ff6/gdx-backend-lwjgl-1.9.5-sources.jar!/com/badlogic/gdx/backends/lwjgl/LwjglApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/DynamicGameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/StaticGameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="method#getDefaultBodyDef#0;class#Person#0" expanded="false" />
+            <element signature="method#getDefaultFixtureDef#0;class#Person#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/Views/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameworld/GameRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameworld/GameWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/player/PlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerController#0;class#PlayerController#0" expanded="false" />
+            <element signature="method#mouseMoved#0;class#PlayerController#0" expanded="false" />
+            <element signature="method#keyUp#0;class#PlayerController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/shooter/screens/GameScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="43" column="27" lean-forward="true" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+        <state relative-caret-position="260">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#show#0;class#GameScreen#0" expanded="false" />
             <element signature="method#resize#0;class#GameScreen#0" expanded="false" />
             <element signature="method#hide#0;class#GameScreen#0" expanded="false" />
@@ -3758,85 +3668,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/GameObject.java">
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/Views/PlayerView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="378">
+          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/DynamicGameObject.java">
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/helpers/MathHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/gameobjects/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/StaticGameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/GameWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1442#1458#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/player/PlayerController.java">
+    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/ShooterGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="239">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
-            <element signature="method#mouseMoved#0;class#PlayerController#0" expanded="false" />
-            <element signature="method#keyDown#0;class#PlayerController#0" expanded="false" />
-            <element signature="method#keyUp#0;class#PlayerController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/objects/Wagon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/shooter/game/map/GameMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
           </folding>
         </state>
       </provider>

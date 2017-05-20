@@ -13,6 +13,6 @@ public class MathHelper {
             rad += Math.PI;
         }
 
-        return (float) Math.toDegrees(rad);
+        return (float) Math.toDegrees(-rad);
     }
 }

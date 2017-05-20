@@ -2,32 +2,37 @@ package com.shooter.screens;
 
 import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.math.Vector2;
-import com.shooter.game.camera.CameraController;
-import com.shooter.game.GameWorld;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.shooter.gameworld.GameRenderer;
+import com.shooter.gameworld.GameWorld;
+import com.shooter.player.PlayerController;
 
 /**
  * Created by miraj on 11.3.17.
  */
 public class GameScreen implements Screen {
+    private final static float VIEWPORT_WIDTH = 15;
+    private final static float VIEWPORT_HEIGHT = 15;
+
     private final String START_MAP = "maps/Map.tmx";
 
-    private CameraController cameraController;
-    private GameWorld gameWorld;
+    private OrthographicCamera camera;
+
+    private GameWorld world;
+    private GameRenderer renderer;
 
     private InputMultiplexer multiplexer;
 
     public GameScreen(int width, int height){
-        cameraController = new CameraController(width, height);
-        gameWorld = new GameWorld(START_MAP, cameraController);
+        OrthographicCamera camera = new OrthographicCamera();
+        camera.setToOrtho(true, VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
+        camera.update();
+
+        world = new GameWorld(START_MAP, camera);
+        renderer = new GameRenderer(world, camera);
 
         multiplexer = new InputMultiplexer();
-        multiplexer.addProcessor(cameraController);
-
-        for (InputProcessor processor: gameWorld.getInputProcessors()) {
-            multiplexer.addProcessor(processor);
-        }
-
+        multiplexer.addProcessor(new PlayerController(world.getPlayer(), camera));
         Gdx.input.setInputProcessor(multiplexer);
     }
 
@@ -41,8 +46,8 @@ public class GameScreen implements Screen {
         Gdx.gl.glClearColor(0,0,0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        gameWorld.update();
-        gameWorld.render();
+        world.update(deltaTime);
+        renderer.render();
     }
 
     @Override

@@ -1,9 +1,11 @@
 package com.shooter.game.map;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
+import com.badlogic.gdx.math.Vector2;
 
 /**
  * Created by miraj on 20.5.17.
@@ -13,15 +15,23 @@ public class GameMap {
 
     OrthographicCamera camera;
     OrthogonalTiledMapRenderer renderer;
+    TiledMap map;
 
     public GameMap(String path, OrthographicCamera camera){
-        TiledMap tiledMap = new TmxMapLoader().load(path);
+        map = new TmxMapLoader().load(path);
         this.camera = camera;
-        renderer = new OrthogonalTiledMapRenderer(tiledMap, UNIT_SCALE);
+        renderer = new OrthogonalTiledMapRenderer(map, UNIT_SCALE);
+
+        getStartPlayerPosition();
     }
 
     public void render(){
         renderer.setView(camera);
         renderer.render();
+    }
+
+    public Vector2 getStartPlayerPosition(){
+        MapObject startPoint =  map.getLayers().get("GameObjects").getObjects().get("StartPoint");
+        return new Vector2((Float)startPoint.getProperties().get("x"), (Float)startPoint.getProperties().get("y"));
     }
 }
