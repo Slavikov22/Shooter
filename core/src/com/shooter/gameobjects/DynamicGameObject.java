@@ -7,8 +7,8 @@ import com.badlogic.gdx.physics.box2d.World;
  * Created by miraj on 19.5.17.
  */
 public abstract class DynamicGameObject extends GameObject{
-    public DynamicGameObject(World world, float posX, float posY){
-        super(world, posX, posY);
+    public DynamicGameObject(World world, Vector2 position){
+        super(world, position);
     }
 
     public void applyForce(Vector2 force){

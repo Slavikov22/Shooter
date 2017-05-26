@@ -1,10 +1,13 @@
 package com.shooter.player;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.shooter.gameobjects.Player;
+import com.shooter.helpers.CameraHelper;
 import com.shooter.helpers.MathHelper;
 
 /**
@@ -12,16 +15,18 @@ import com.shooter.helpers.MathHelper;
  */
 public final class PlayerController extends InputAdapter {
     private Player player;
-    private OrthographicCamera camera;
 
-    public PlayerController(Player player, OrthographicCamera camera){
+    public PlayerController(Player player){
         this.player = player;
-        this.camera = camera;
     }
 
     public boolean mouseMoved(int x, int y){
-        Vector3 mousePos = new Vector3(x, y, 0);
-        camera.unproject(mousePos);
+        y = Gdx.graphics.getHeight() - y;
+
+        Vector2 mousePos = CameraHelper.unproject(new Vector2(x, y));
+
+        mousePos.x += CameraHelper.getOffsetX();
+        mousePos.y += CameraHelper.getOffsetY();
 
         player.setAngle(MathHelper.getAngle(player.getPosition().x, player.getPosition().y, mousePos.x, mousePos.y));
         return false;

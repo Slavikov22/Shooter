@@ -8,11 +8,15 @@ import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.World;
 import com.shooter.game.map.GameMap;
 import com.shooter.gameobjects.Player;
+import com.shooter.helpers.CameraHelper;
+import com.shooter.helpers.TiledMapHelper;
 
 /**
  * Created by miraj on 13.3.17.
  */
 public class GameWorld {
+    private final static float TILE_SIZE = 1.0f;
+
     private final static float TIME_STEP = 1.0f / 60.0f;
 
     private final static int VELOCITY_ITERATIONS = 10;
@@ -23,32 +27,41 @@ public class GameWorld {
 
     private World world;
     private TiledMap map;
-    private GameMap gameMap;
     private Player player;
 
-    private OrthographicCamera camera;
-
-    public GameWorld(String mapName, OrthographicCamera camera){
+    public GameWorld(String mapName){
         map = new TmxMapLoader().load(mapName);
-        gameWidth = (Integer) map.getProperties().get("width");
-        gameHeight = (Integer) map.getProperties().get("height");
 
-        this.camera = camera;
+        gameWidth = TiledMapHelper.getWidth(map);
+        gameHeight = TiledMapHelper.getHeight(map);
 
         world = new World(new Vector2(0,0), false);
 
-        float posX = (Float) map.getLayers().get("GameObjects").getObjects().get("StartPoint").getProperties().get("x");
-        float posY = (Float) map.getLayers().get("GameObjects").getObjects().get("StartPoint").getProperties().get("y");
-        Vector3 position = camera.unproject(new Vector3(posX, posY, 0));
-        player = new Player(world, position.x, position.y);
+        player = new Player(world, TiledMapHelper.getPlayerPosition(map));
     }
 
     public void update(float deltaTime){
         world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
-        player.update();
+        player.update(deltaTime);
     }
 
     public Player getPlayer(){
         return player;
+    }
+
+    public TiledMap getMap(){
+        return map;
+    }
+
+    public float getWidth(){
+        return gameWidth;
+    }
+
+    public float getHeight(){
+        return gameHeight;
+    }
+
+    public float getTileSize(){
+        return TILE_SIZE;
     }
 }

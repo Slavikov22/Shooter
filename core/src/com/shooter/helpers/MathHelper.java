@@ -5,7 +5,7 @@ package com.shooter.helpers;
  */
 public class MathHelper {
     public static float getAngle(float x1, float y1, float x2, float y2){
-        double rad = Math.atan((y2 - y1) / (x2 - x1));
+        double rad = Math.atan((y1 - y2) / (x2 - x1));
 
         rad += 2 * Math.PI;
 

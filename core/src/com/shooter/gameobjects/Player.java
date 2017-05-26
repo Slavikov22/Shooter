@@ -14,23 +14,23 @@ public class Player extends Person {
     public boolean isMovedDown;
     public boolean isMovedRight;
 
-    public Player(World world, float posX, float posY){
-        super(world, posX, posY);
+    public Player(World world, Vector2 position){
+        super(world, position);
     }
 
-    public void update(){
+    public void update(float deltaTime){
         System.out.print(getPosition().x);
         System.out.print("   ");
         System.out.println(getPosition().y);
 
         if (isMovedUp){
-            applyForce(new Vector2(0, -FORCE));
+            applyForce(new Vector2(0, FORCE));
         }
         if (isMovedLeft){
             applyForce(new Vector2(-FORCE, 0));
         }
         if (isMovedDown){
-            applyForce(new Vector2(0, FORCE));
+            applyForce(new Vector2(0, -FORCE));
         }
         if (isMovedRight){
             applyForce(new Vector2(FORCE, 0));

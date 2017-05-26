@@ -4,15 +4,9 @@ import com.badlogic.gdx.Game;
 import com.shooter.screens.GameScreen;
 
 public class ShooterGame extends Game {
-
-	public static final int WIDTH = 800;
-	public static final int HEIGHT = 800;
-
-	public static final String TITLE = "Shooter";
-
 	@Override
 	public void create() {
-		this.setScreen(new GameScreen(WIDTH, HEIGHT));
+		this.setScreen(new GameScreen());
 	}
 
 	@Override

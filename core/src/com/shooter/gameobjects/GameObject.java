@@ -1,5 +1,6 @@
 package com.shooter.gameobjects;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
 
@@ -11,13 +12,13 @@ abstract public class GameObject {
     protected Fixture fixture;
     protected World world;
 
-    public GameObject(World world, float posX, float posY){
+    public GameObject(World world, Vector2 position){
         this.world = world;
 
         this.body = world.createBody(getDefaultBodyDef());
         this.fixture = body.createFixture(getDefaultFixtureDef());
 
-        setPosition(posX, posY);
+        setPosition(position);
     }
 
     public Vector2 getPosition(){

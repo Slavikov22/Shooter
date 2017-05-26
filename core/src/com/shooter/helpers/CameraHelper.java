@@ -1,0 +1,47 @@
+package com.shooter.helpers;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
+
+/**
+ * Created by miraj on 24.5.17.
+ */
+public class CameraHelper {
+    private static OrthographicCamera camera;
+
+    public static void setCamera(OrthographicCamera cam){
+        camera = cam;
+    }
+
+    public static float getOffsetX(){
+        return camera.position.x - camera.viewportWidth / 2;
+    }
+
+    public static float getOffsetY(){
+        return camera.position.y - camera.viewportHeight / 2;
+    }
+
+    public static Vector2 project(Vector2 position){
+        float coefX = Gdx.graphics.getWidth() / camera.viewportWidth;
+        float coefY = Gdx.graphics.getHeight() / camera.viewportHeight;
+
+        return new Vector2(position.x * coefX, position.y * coefY);
+    }
+
+    public static Vector2 unproject(Vector2 position){
+        float coefX = Gdx.graphics.getWidth() / camera.viewportWidth;
+        float coefY = Gdx.graphics.getHeight() / camera.viewportHeight;
+
+        return new Vector2(position.x / coefX, position.y / coefY);
+    }
+
+    public static float project(float x){
+        return project(new Vector2(x, 0)).x;
+    }
+
+    public static float unproject(float x){
+        return unproject(new Vector2(x, 0)).x;
+    }
+}
