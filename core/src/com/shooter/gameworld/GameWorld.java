@@ -1,15 +1,13 @@
 package com.shooter.gameworld;
 
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.World;
-import com.shooter.game.map.GameMap;
 import com.shooter.gameobjects.Player;
-import com.shooter.helpers.CameraHelper;
+import com.shooter.gameobjects.StaticGameObject;
 import com.shooter.helpers.TiledMapHelper;
+
+import java.util.ArrayList;
 
 /**
  * Created by miraj on 13.3.17.
@@ -29,8 +27,10 @@ public class GameWorld {
     private TiledMap map;
     private Player player;
 
+    private ArrayList<StaticGameObject> staticObjects;
+
     public GameWorld(String mapName){
-        map = new TmxMapLoader().load(mapName);
+        map = TiledMapHelper.getTiledMap(mapName);
 
         gameWidth = TiledMapHelper.getWidth(map);
         gameHeight = TiledMapHelper.getHeight(map);
@@ -38,11 +38,17 @@ public class GameWorld {
         world = new World(new Vector2(0,0), false);
 
         player = new Player(world, TiledMapHelper.getPlayerPosition(map));
+
+        staticObjects = TiledMapHelper.getStaticObjects(map, world);
     }
 
     public void update(float deltaTime){
         world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
         player.update(deltaTime);
+    }
+
+    public World getWorld(){
+        return world;
     }
 
     public Player getPlayer(){

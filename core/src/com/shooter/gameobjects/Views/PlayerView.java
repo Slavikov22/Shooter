@@ -15,17 +15,15 @@ public class PlayerView extends View {
     private final int TEXTURE_CENTER_X = 11;
     private final int TEXTURE_CENTER_Y = 14;
 
-    private Box2DDebugRenderer renderer;
-
     public PlayerView(Player player, OrthographicCamera camera){
         super(player, camera);
-        setSprite(new Texture(TEXTURE_PATH));
-        renderer = new Box2DDebugRenderer();
+        setTexture(new Texture(TEXTURE_PATH));
     }
 
     @Override
-    public void setSprite(Texture texture){
+    public void setTexture(Texture texture){
         sprite = new Sprite(texture);
+        sprite.setScale(1.8f);
         sprite.setOrigin(TEXTURE_CENTER_X, TEXTURE_CENTER_Y);
     }
 }

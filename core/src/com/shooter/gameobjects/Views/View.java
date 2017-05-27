@@ -21,22 +21,22 @@ public class View {
         this.object = object;
         this.camera = camera;
 
-        this.sprite = new Sprite();
-        this.spriteBatch = new SpriteBatch();
+        sprite = new Sprite();
+        spriteBatch = new SpriteBatch();
     }
 
     public void render(){
         Vector3 position = camera.project(new Vector3(object.getPosition(), 0));
         sprite.setX(position.x - sprite.getOriginX());
         sprite.setY(position.y - sprite.getOriginY());
-        sprite.setRotation(object.getAngle());
+        sprite.setRotation((float) Math.toDegrees(2*Math.PI - object.getAngle()));
 
         spriteBatch.begin();
         sprite.draw(spriteBatch);
         spriteBatch.end();
     }
 
-    public void setSprite(Texture texture){
+    public void setTexture(Texture texture){
         sprite.setTexture(texture);
         sprite.setOriginCenter();
     }

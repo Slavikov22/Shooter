@@ -7,7 +7,7 @@ import com.badlogic.gdx.physics.box2d.World;
  * Created by miraj on 19.5.17.
  */
 public class Player extends Person {
-    private final float FORCE = 150.0f;
+    private final float FORCE = 200.0f;
 
     public boolean isMovedUp;
     public boolean isMovedLeft;
@@ -19,18 +19,14 @@ public class Player extends Person {
     }
 
     public void update(float deltaTime){
-        System.out.print(getPosition().x);
-        System.out.print("   ");
-        System.out.println(getPosition().y);
-
         if (isMovedUp){
-            applyForce(new Vector2(0, FORCE));
+            applyForce(new Vector2(0, -FORCE));
         }
         if (isMovedLeft){
             applyForce(new Vector2(-FORCE, 0));
         }
         if (isMovedDown){
-            applyForce(new Vector2(0, -FORCE));
+            applyForce(new Vector2(0, FORCE));
         }
         if (isMovedRight){
             applyForce(new Vector2(FORCE, 0));

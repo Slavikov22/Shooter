@@ -21,8 +21,6 @@ public final class PlayerController extends InputAdapter {
     }
 
     public boolean mouseMoved(int x, int y){
-        y = Gdx.graphics.getHeight() - y;
-
         Vector2 mousePos = CameraHelper.unproject(new Vector2(x, y));
 
         mousePos.x += CameraHelper.getOffsetX();
@@ -68,9 +66,5 @@ public final class PlayerController extends InputAdapter {
         }
 
         return false;
-    }
-
-    public Player getPlayer(){
-        return player;
     }
 }

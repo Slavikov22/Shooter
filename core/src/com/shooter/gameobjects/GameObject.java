@@ -26,7 +26,7 @@ abstract public class GameObject {
     }
 
     public void setPosition(Vector2 position){
-        body.setTransform(position, 0);
+        body.setTransform(position, getAngle());
     }
 
     public void setPosition(float x, float y){

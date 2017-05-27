@@ -9,10 +9,19 @@ import com.badlogic.gdx.math.Vector3;
  * Created by miraj on 24.5.17.
  */
 public class CameraHelper {
+    private final static float VIEWPORT_WIDTH = 15;
+    private final static float VIEWPORT_HEIGHT = 15;
+
     private static OrthographicCamera camera;
 
-    public static void setCamera(OrthographicCamera cam){
-        camera = cam;
+    public static OrthographicCamera getCamera(){
+        if (camera == null){
+            camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+            camera.setToOrtho(true, VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
+            camera.update();
+        }
+
+        return camera;
     }
 
     public static float getOffsetX(){

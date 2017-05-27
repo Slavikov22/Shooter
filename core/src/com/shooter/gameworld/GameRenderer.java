@@ -4,18 +4,20 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.shooter.gameobjects.Views.PlayerView;
 import com.shooter.helpers.CameraHelper;
+import com.shooter.helpers.TiledMapHelper;
 
 /**
  * Created by miraj on 20.5.17.
  */
 public class GameRenderer {
-    private final static float UNIT_SCALE = 1.0f / 32.0f;
-
     private GameWorld world;
     private PlayerView playerView;
     private OrthogonalTiledMapRenderer mapRenderer;
+
+    private Box2DDebugRenderer box2DDebugRenderer;
 
     private OrthographicCamera camera;
 
@@ -24,14 +26,25 @@ public class GameRenderer {
         this.camera = camera;
 
         playerView = new PlayerView(world.getPlayer(), camera);
-        mapRenderer = new OrthogonalTiledMapRenderer(world.getMap(), UNIT_SCALE);
-        mapRenderer.setView(camera);
+        mapRenderer = new OrthogonalTiledMapRenderer(world.getMap(), 1.0f / TiledMapHelper.TILE_SIZE);
+
+        box2DDebugRenderer = new Box2DDebugRenderer();
     }
 
     public void render(){
-        mapRenderer.setView(camera);
+        updateMapRenderer();
         mapRenderer.render();
 
         playerView.render();
+
+        box2DDebugRenderer.render(world.getWorld(), camera.combined);
+    }
+
+    private void updateMapRenderer(){
+        mapRenderer.setView(camera.combined, 20, 20, 100, 100);
+        mapRenderer.getViewBounds().x -= 20;
+        mapRenderer.getViewBounds().y -= 20;
+        mapRenderer.getViewBounds().width += 40;
+        mapRenderer.getViewBounds().height += 40;
     }
 }
