@@ -30,6 +30,12 @@ public final class PlayerController extends InputAdapter {
         return false;
     }
 
+    public boolean touchDown (int screenX, int screenY, int pointer, int button){
+        player.fire();
+
+        return false;
+    }
+
     public boolean keyDown (int keycode){
         switch (keycode) {
             case Input.Keys.W:

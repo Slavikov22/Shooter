@@ -1,7 +1,10 @@
 package com.shooter.gameobjects;
 
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.World;
+import com.shooter.helpers.MathHelper;
 
 /**
  * Created by miraj on 19.5.17.
@@ -16,6 +19,12 @@ public class Player extends Person {
 
     public Player(World world, Vector2 position){
         super(world, position);
+
+        Filter filter = new Filter();
+        filter.categoryBits = EntityCategory.PLAYER;
+        filter.maskBits = EntityCategory.STATIC | EntityCategory.ENEMY | EntityCategory.ENEMY_BULLET;
+
+        fixture.setFilterData(filter);
     }
 
     public void update(float deltaTime){
@@ -31,5 +40,11 @@ public class Player extends Person {
         if (isMovedRight){
             applyForce(new Vector2(FORCE, 0));
         }
+    }
+
+    public void fire(){
+        Vector2 position = new Vector2(getPosition());
+        Bullet bullet = new Bullet(world, position, EntityCategory.PLAYER_BULLET);
+        bullet.setLinearVelocity(MathHelper.getVector2byAngle(getAngle(), 150.0f));
     }
 }

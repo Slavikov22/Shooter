@@ -14,4 +14,8 @@ public abstract class DynamicGameObject extends GameObject{
     public void applyForce(Vector2 force){
         body.applyForceToCenter(force, true);
     }
+
+    public void setLinearVelocity(Vector2 velocity){
+        body.setLinearVelocity(velocity);
+    }
 }

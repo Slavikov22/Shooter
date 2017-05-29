@@ -1,5 +1,7 @@
 package com.shooter.helpers;
 
+import com.badlogic.gdx.math.Vector2;
+
 /**
  * Created by miraj on 19.5.17.
  */
@@ -24,5 +26,17 @@ public class MathHelper {
         float pp = (lines[0] + lines[1] + lines[2]) / 2;
 
         return (float) Math.sqrt(pp * (pp - lines[0]) * (pp - lines[1]) * (pp - lines[2]));
+    }
+
+    public static Vector2 getVector2byAngle(float angle, float module){
+        float x = (float) (Math.pow(module, 2) / (1 + Math.pow(Math.tan(angle), 2)));
+        float y = (float) (x * Math.tan(angle));
+
+        if (angle < -(Math.PI / 2)){
+            x = -x;
+            y = -y;
+        }
+
+        return new Vector2(x, y);
     }
 }

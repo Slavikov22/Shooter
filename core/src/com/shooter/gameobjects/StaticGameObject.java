@@ -1,10 +1,7 @@
 package com.shooter.gameobjects;
 
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.PolygonShape;
-import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.physics.box2d.*;
 
 /**
  * Created by miraj on 19.5.17.
@@ -32,6 +29,9 @@ public class StaticGameObject extends GameObject{
     protected FixtureDef getDefaultFixtureDef(){
         FixtureDef fd = new FixtureDef();
         fd.shape = defaultShape;
+
+        fd.filter.categoryBits = EntityCategory.STATIC;
+        fd.filter.maskBits = -1;
 
         return fd;
     }

@@ -9,8 +9,8 @@ import com.badlogic.gdx.math.Vector3;
  * Created by miraj on 24.5.17.
  */
 public class CameraHelper {
-    private final static float VIEWPORT_WIDTH = 15;
-    private final static float VIEWPORT_HEIGHT = 15;
+    private final static float VIEWPORT_WIDTH = 20;
+    private final static float VIEWPORT_HEIGHT = 20;
 
     private static OrthographicCamera camera;
 

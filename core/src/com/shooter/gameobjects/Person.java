@@ -7,7 +7,7 @@ import com.badlogic.gdx.physics.box2d.*;
  * Created by miraj on 19.5.17.
  */
 public class Person extends DynamicGameObject {
-    public final static float RADIUS = 0.6f;
+    public final static float RADIUS = 0.5f;
 
     private final static float LINEAR_DAMPING = 30.0f;
 
@@ -21,6 +21,8 @@ public class Person extends DynamicGameObject {
         bd.type = BodyDef.BodyType.DynamicBody;
         bd.linearDamping = LINEAR_DAMPING;
         bd.fixedRotation = true;
+        bd.bullet = false;
+
         return bd;
     }
 
@@ -31,6 +33,7 @@ public class Person extends DynamicGameObject {
         circle.setRadius(RADIUS);
         fd.shape = circle;
         fd.density = 1;
+
         return fd;
     }
 }

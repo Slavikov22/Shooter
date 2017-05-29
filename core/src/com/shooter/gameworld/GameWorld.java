@@ -2,7 +2,10 @@ package com.shooter.gameworld;
 
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.World;
+import com.shooter.gameobjects.Bullet;
 import com.shooter.gameobjects.Player;
 import com.shooter.gameobjects.StaticGameObject;
 import com.shooter.helpers.TiledMapHelper;
@@ -29,6 +32,8 @@ public class GameWorld {
 
     private ArrayList<StaticGameObject> staticObjects;
 
+    private ArrayList<Bullet> bullets;
+
     public GameWorld(String mapName){
         map = TiledMapHelper.getTiledMap(mapName);
 
@@ -40,11 +45,17 @@ public class GameWorld {
         player = new Player(world, TiledMapHelper.getPlayerPosition(map));
 
         staticObjects = TiledMapHelper.getStaticObjects(map, world);
+
+        bullets = new ArrayList<Bullet>();
     }
 
     public void update(float deltaTime){
         world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
         player.update(deltaTime);
+    }
+
+    public void addBullet(Bullet bullet){
+        bullets.add(bullet);
     }
 
     public World getWorld(){

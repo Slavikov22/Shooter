@@ -12,6 +12,8 @@ import com.shooter.gameobjects.Player;
 public class PlayerView extends View {
     private final String TEXTURE_PATH = "images/persons/Player.png";
 
+    private final float SCALE = 1.55f;
+
     private final int TEXTURE_CENTER_X = 11;
     private final int TEXTURE_CENTER_Y = 14;
 
@@ -23,7 +25,7 @@ public class PlayerView extends View {
     @Override
     public void setTexture(Texture texture){
         sprite = new Sprite(texture);
-        sprite.setScale(1.8f);
+        sprite.setScale(SCALE);
         sprite.setOrigin(TEXTURE_CENTER_X, TEXTURE_CENTER_Y);
     }
 }
