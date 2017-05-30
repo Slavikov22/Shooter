@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0.0" orientation="orthogonal" renderorder="left-down" width="60" height="60" tilewidth="32" tileheight="32" nextobjectid="764">
+<map version="1.0.0" orientation="orthogonal" renderorder="left-down" width="60" height="60" tilewidth="32" tileheight="32" nextobjectid="784">
  <tileset firstgid="1" name="Groove" tilewidth="32" tileheight="32" tilecount="9" columns="0">
   <tile id="0">
    <image width="32" height="32" source="../images/groove/metal_2.bmp"/>
@@ -702,6 +702,25 @@
   <object id="763" x="0.666667" y="1">
    <polygon points="0,0 -0.166667,1918 1918.67,1917 1918.33,-3 13.8333,-0.5 14.3333,14 1902.33,12.5 1903.83,1903.5 14.8333,1904.5 13.3333,0"/>
   </object>
+ </objectgroup>
+ <objectgroup name="EnemySpawns">
+  <object id="764" name="Spawn_17" x="255.333" y="1410" width="32" height="30.6667"/>
+  <object id="765" name="Spawn_16" x="1729" y="1187" width="32" height="32"/>
+  <object id="766" name="Spawn_15" x="801.333" y="385.333" width="33.3333" height="34.6667"/>
+  <object id="767" name="Spawn_14" x="61.3333" y="512" width="40" height="44"/>
+  <object id="768" name="Spawn_13" x="1217.33" y="1494.67" width="45.3333" height="49.3333"/>
+  <object id="769" name="Spawn_12" x="645.333" y="1486.67" width="41.3333" height="42.6667"/>
+  <object id="771" name="Spawn_11" x="1408" y="92" width="44" height="45.3333"/>
+  <object id="772" name="Spawn_10" x="540" y="58.6667" width="49.3333" height="49.3333"/>
+  <object id="773" name="Spawn_9" x="1649.33" y="1438.67" width="48" height="50.6667"/>
+  <object id="774" name="Spawn_8" x="1793.33" y="702.667" width="52" height="56"/>
+  <object id="775" name="Spawn_7" x="66.6667" y="757.333" width="50.6667" height="50.6667"/>
+  <object id="776" name="Spawn_6" x="369.333" y="144" width="53.3333" height="53.3333"/>
+  <object id="777" name="Spawn_5" x="80" y="1682.67" width="46.6667" height="53.3333"/>
+  <object id="778" name="Spawn_4" x="304" y="1113.33" width="46.6667" height="52"/>
+  <object id="779" name="Spawn_3" x="1553.33" y="116" width="52" height="50.6667"/>
+  <object id="780" name="Spawn_2" x="945.333" y="142.667" width="53.3333" height="53.3333"/>
+  <object id="781" name="Spawn_1" x="1437.33" y="337.333" width="53.3333" height="54.6667"/>
  </objectgroup>
  <objectgroup name="GameObjects">
   <object id="317" name="StartPoint" x="960" y="896" width="32" height="32"/>

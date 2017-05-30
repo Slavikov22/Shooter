@@ -6,6 +6,10 @@ import com.badlogic.gdx.math.Vector2;
  * Created by miraj on 19.5.17.
  */
 public class MathHelper {
+    public static float getRange(float x1, float y1, float x2, float y2){
+        return (float) Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+    }
+
     public static float getAngle(float x1, float y1, float x2, float y2){
         double rad = Math.atan((y1 - y2) / (x2 - x1));
 

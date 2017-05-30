@@ -6,6 +6,7 @@ import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
+import com.shooter.gameobjects.EntityCategory;
 import com.shooter.gameobjects.Player;
 import com.shooter.helpers.CameraHelper;
 import com.shooter.helpers.MathHelper;
@@ -31,7 +32,7 @@ public final class PlayerController extends InputAdapter {
     }
 
     public boolean touchDown (int screenX, int screenY, int pointer, int button){
-        player.fire();
+        player.fire(EntityCategory.PLAYER_BULLET);
 
         return false;
     }

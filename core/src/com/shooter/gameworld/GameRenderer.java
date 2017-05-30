@@ -5,6 +5,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
+import com.shooter.gameobjects.Enemy;
+import com.shooter.gameobjects.Views.EnemyView;
 import com.shooter.gameobjects.Views.PlayerView;
 import com.shooter.helpers.CameraHelper;
 import com.shooter.helpers.TiledMapHelper;
@@ -15,6 +17,7 @@ import com.shooter.helpers.TiledMapHelper;
 public class GameRenderer {
     private GameWorld world;
     private PlayerView playerView;
+    private EnemyView enemyView;
     private OrthogonalTiledMapRenderer mapRenderer;
 
     private Box2DDebugRenderer box2DDebugRenderer;
@@ -36,6 +39,11 @@ public class GameRenderer {
         mapRenderer.render();
 
         playerView.render();
+
+        for (Enemy enemy: world.getEnemies()){
+            enemyView = new EnemyView(enemy, camera);
+            enemyView.render();
+        }
 
         box2DDebugRenderer.render(world.getWorld(), camera.combined);
     }

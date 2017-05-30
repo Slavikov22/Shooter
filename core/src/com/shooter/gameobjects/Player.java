@@ -10,7 +10,8 @@ import com.shooter.helpers.MathHelper;
  * Created by miraj on 19.5.17.
  */
 public class Player extends Person {
-    private final float FORCE = 200.0f;
+    private final static float FORCE = 200.0f;
+    private final static float FIRE_INTERVAL = 0.5f;
 
     public boolean isMovedUp;
     public boolean isMovedLeft;
@@ -25,9 +26,14 @@ public class Player extends Person {
         filter.maskBits = EntityCategory.STATIC | EntityCategory.ENEMY | EntityCategory.ENEMY_BULLET;
 
         fixture.setFilterData(filter);
+
+        minFireInterval = FIRE_INTERVAL;
     }
 
+    @Override
     public void update(float deltaTime){
+        super.update(deltaTime);
+
         if (isMovedUp){
             applyForce(new Vector2(0, -FORCE));
         }
@@ -40,11 +46,5 @@ public class Player extends Person {
         if (isMovedRight){
             applyForce(new Vector2(FORCE, 0));
         }
-    }
-
-    public void fire(){
-        Vector2 position = new Vector2(getPosition());
-        Bullet bullet = new Bullet(world, position, EntityCategory.PLAYER_BULLET);
-        bullet.setLinearVelocity(MathHelper.getVector2byAngle(getAngle(), 150.0f));
     }
 }
