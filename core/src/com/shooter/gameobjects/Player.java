@@ -4,6 +4,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.World;
+import com.shooter.gameworld.GameWorld;
 import com.shooter.helpers.MathHelper;
 
 /**
@@ -12,14 +13,17 @@ import com.shooter.helpers.MathHelper;
 public class Player extends Person {
     private final static float FORCE = 200.0f;
     private final static float FIRE_INTERVAL = 0.5f;
+    private final static float HEALTH = 1000.0f;
 
     public boolean isMovedUp;
     public boolean isMovedLeft;
     public boolean isMovedDown;
     public boolean isMovedRight;
 
-    public Player(World world, Vector2 position){
-        super(world, position);
+    public Player(GameWorld gameWorld, Vector2 position){
+        super(gameWorld, position);
+
+        health = HEALTH;
 
         Filter filter = new Filter();
         filter.categoryBits = EntityCategory.PLAYER;

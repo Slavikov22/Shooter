@@ -1,7 +1,9 @@
 package com.shooter.gameobjects;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
+import com.shooter.gameworld.GameWorld;
 
 /**
  * Created by miraj on 19.5.17.
@@ -13,8 +15,8 @@ public class StaticGameObject extends GameObject{
         defaultShape = shape;
     }
 
-    public StaticGameObject(World world, Vector2 position){
-        super(world, position);
+    public StaticGameObject(GameWorld gameWorld, Vector2 position){
+        super(gameWorld, position);
     }
 
     @Override

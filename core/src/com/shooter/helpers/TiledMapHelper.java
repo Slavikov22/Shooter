@@ -13,6 +13,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.ShortArray;
 import com.shooter.gameobjects.Spawn;
 import com.shooter.gameobjects.StaticGameObject;
+import com.shooter.gameworld.GameWorld;
 
 import java.util.ArrayList;
 
@@ -46,7 +47,7 @@ public class TiledMapHelper {
         return position;
     }
 
-    public static ArrayList<StaticGameObject> getStaticObjects(TiledMap map, World world){
+    public static ArrayList<StaticGameObject> getStaticObjects(TiledMap map, GameWorld gameWorld){
         ArrayList<StaticGameObject> result = new ArrayList<StaticGameObject>();
 
         for (MapObject mapObject: map.getLayers().get("StaticObjects").getObjects()){
@@ -79,21 +80,21 @@ public class TiledMapHelper {
 
                 StaticGameObject.setDefaultShape(polygonShape);
 
-                result.add(new StaticGameObject(world, position));
+                result.add(new StaticGameObject(gameWorld, position));
             }
         }
 
         return result;
     }
 
-    public static Spawn getSpawn(TiledMap map, World world){
+    public static Spawn getSpawn(TiledMap map, GameWorld gameWorld){
         ArrayList<Vector2> positions = new ArrayList<Vector2>();
 
         for (MapObject mapObject: map.getLayers().get("EnemySpawns").getObjects()){
             positions.add(new Vector2(getObjectPosition(mapObject)));
         }
 
-        return new Spawn(world, positions);
+        return new Spawn(gameWorld, positions);
     }
 
     private static Vector2 getObjectPosition(MapObject object){

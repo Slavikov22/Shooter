@@ -6,9 +6,14 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.World;
 import com.shooter.gameobjects.*;
+import com.shooter.helpers.MathHelper;
 import com.shooter.helpers.TiledMapHelper;
+import com.shooter.listeners.ShootListener;
+import com.shooter.removers.GameObjectRemover;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by miraj on 13.3.17.
@@ -25,11 +30,18 @@ public class GameWorld {
 
     private World world;
     private TiledMap map;
+
     private Player player;
+
     private Spawn spawn;
-    private ArrayList<Enemy> enemies;
 
     private ArrayList<StaticGameObject> staticObjects;
+
+    private ArrayList<Enemy> enemies = new ArrayList<Enemy>();
+
+    private ArrayList<Bullet> bullets = new ArrayList<Bullet>();
+
+    private GameObjectRemover objectRemover = new GameObjectRemover();
 
     public GameWorld(String mapName){
         map = TiledMapHelper.getTiledMap(mapName);
@@ -39,18 +51,20 @@ public class GameWorld {
 
         world = new World(new Vector2(0,0), false);
 
-        staticObjects = TiledMapHelper.getStaticObjects(map, world);
+        staticObjects = TiledMapHelper.getStaticObjects(map, this);
 
-        player = new Player(world, TiledMapHelper.getPlayerPosition(map));
+        player = new Player(this, TiledMapHelper.getPlayerPosition(map));
 
-        enemies = new ArrayList<Enemy>();
-
-        spawn = TiledMapHelper.getSpawn(map, world);
+        spawn = TiledMapHelper.getSpawn(map, this);
         spawn.setSpawnInterval(SPAWN_INTERVAL);
+
+        world.setContactListener(new ShootListener(this));
     }
 
     public void update(float deltaTime){
         world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
+
+        objectRemover.removeAll();
 
         player.update(deltaTime);
 
@@ -62,6 +76,10 @@ public class GameWorld {
         for (Enemy enemy: enemies){
             enemy.update(deltaTime, player.getPosition());
         }
+    }
+
+    public void addBullet(Vector2 position, float angle, short category){
+        bullets.add(new Bullet(this, position, angle, category));
     }
 
     public World getWorld(){
@@ -76,6 +94,10 @@ public class GameWorld {
         return enemies;
     }
 
+    public ArrayList<Bullet> getBullets(){
+        return bullets;
+    }
+
     public TiledMap getMap(){
         return map;
     }
@@ -86,5 +108,9 @@ public class GameWorld {
 
     public float getHeight(){
         return gameHeight;
+    }
+
+    public GameObjectRemover getObjectRemover(){
+        return objectRemover;
     }
 }

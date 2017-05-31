@@ -1,7 +1,9 @@
 package com.shooter.gameobjects;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
+import com.shooter.gameworld.GameWorld;
 import com.shooter.helpers.MathHelper;
 
 /**
@@ -10,13 +12,14 @@ import com.shooter.helpers.MathHelper;
 public abstract class Person extends DynamicGameObject {
     private final static float RADIUS = 0.5f;
     private final static float LINEAR_DAMPING = 30.0f;
-    private final static float BULLET_VELOCITY = 150.0f;
 
-    public float minFireInterval = 0;
+    protected float minFireInterval = 0;
     protected float fireInterval = 0;
 
-    public Person(World world, Vector2 position){
-        super(world, position);
+    protected float health;
+
+    public Person(GameWorld gameWorld, Vector2 position){
+        super(gameWorld, position);
     }
 
     public void update(float deltaTime){
@@ -30,11 +33,13 @@ public abstract class Person extends DynamicGameObject {
 
         fireInterval = 0;
 
-        Vector2 position = new Vector2(getPosition());
-        Bullet bullet = new Bullet(world, position, bulletCategory);
-        bullet.setLinearVelocity(MathHelper.getVector2byAngle(getAngle(), BULLET_VELOCITY));
+        gameWorld.addBullet(getPosition(), getAngle(), bulletCategory);
 
         return true;
+    }
+
+    public void reduceHealth(float deltaHealth){
+        health -= deltaHealth;
     }
 
     @Override

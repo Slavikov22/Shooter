@@ -20,11 +20,6 @@ public class PlayerView extends View {
     public PlayerView(Player player, OrthographicCamera camera){
         super(player, camera);
         setTexture(new Texture(TEXTURE_PATH));
-    }
-
-    @Override
-    public void setTexture(Texture texture){
-        sprite = new Sprite(texture);
         sprite.setScale(SCALE);
         sprite.setOrigin(TEXTURE_CENTER_X, TEXTURE_CENTER_Y);
     }

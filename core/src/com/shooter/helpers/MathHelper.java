@@ -33,7 +33,7 @@ public class MathHelper {
     }
 
     public static Vector2 getVector2byAngle(float angle, float module){
-        float x = (float) (Math.pow(module, 2) / (1 + Math.pow(Math.tan(angle), 2)));
+        float x = (float) Math.sqrt(Math.pow(module, 2) / (1 + Math.pow(Math.tan(angle), 2)));
         float y = (float) (x * Math.tan(angle));
 
         if (angle < -(Math.PI / 2)){

@@ -3,6 +3,7 @@ package com.shooter.gameobjects;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
+import com.shooter.gameworld.GameWorld;
 
 /**
  * Created by miraj on 19.5.17.
@@ -10,15 +11,25 @@ import com.badlogic.gdx.physics.box2d.*;
 abstract public class GameObject {
     protected Body body;
     protected Fixture fixture;
-    protected World world;
+    protected GameWorld gameWorld;
 
-    public GameObject(World world, Vector2 position){
-        this.world = world;
+    public GameObject(GameWorld gameWorld, Vector2 position){
+        this.gameWorld = gameWorld;
 
-        this.body = world.createBody(getDefaultBodyDef());
-        this.fixture = body.createFixture(getDefaultFixtureDef());
+        body = gameWorld.getWorld().createBody(getDefaultBodyDef());
+        fixture = body.createFixture(getDefaultFixtureDef());
+
+        body.setUserData(this);
 
         setPosition(position);
+    }
+
+    public GameWorld getGameWorld(){
+        return gameWorld;
+    }
+
+    public Body getBody(){
+        return body;
     }
 
     public Vector2 getPosition(){
@@ -39,10 +50,6 @@ abstract public class GameObject {
 
     public void setAngle(float angle){
         body.setTransform(body.getPosition(), angle);
-    }
-
-    public float getMass(){
-        return body.getMassData().mass;
     }
 
     protected BodyDef getDefaultBodyDef(){

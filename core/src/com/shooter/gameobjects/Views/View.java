@@ -1,5 +1,6 @@
 package com.shooter.gameobjects.Views;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -18,7 +19,7 @@ public class View {
     protected OrthographicCamera camera;
 
     public View(GameObject object, OrthographicCamera camera){
-        this.object = object;
+        setObject(object);
         this.camera = camera;
 
         sprite = new Sprite();
@@ -36,8 +37,12 @@ public class View {
         spriteBatch.end();
     }
 
+    public void setObject(GameObject object){
+        this.object = object;
+    }
+
     public void setTexture(Texture texture){
-        sprite.setTexture(texture);
+        sprite = new Sprite(texture);
         sprite.setOriginCenter();
     }
 }
