@@ -11,6 +11,8 @@ import java.util.Random;
  * Created by miraj on 30.5.17.
  */
 public class Spawn {
+    private final static float MIN_INTERVAL = 1.0f;
+
     private GameWorld gameWorld;
     private ArrayList<Vector2> positions;
 
@@ -40,6 +42,6 @@ public class Spawn {
     }
 
     public void setSpawnInterval(float time){
-        spawnInterval = time;
+        spawnInterval = Math.max(time, MIN_INTERVAL);
     }
 }

@@ -55,7 +55,7 @@ public class GameRenderer {
             bulletView.render();
         }
 
-        box2DDebugRenderer.render(world.getWorld(), camera.combined);
+        //box2DDebugRenderer.render(world.getWorld(), camera.combined);
     }
 
     private void updateMapRenderer(){

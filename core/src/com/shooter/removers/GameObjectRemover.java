@@ -21,6 +21,10 @@ public class GameObjectRemover {
         for (GameObject object: objects){
             GameWorld gameWorld = object.getGameWorld();
 
+            if (object.getBody().getUserData() instanceof Enemy){
+                gameWorld.getPlayer().statistic.kills += 1;
+            }
+
             gameWorld.getWorld().destroyBody(object.getBody());
 
             if (object instanceof Bullet){

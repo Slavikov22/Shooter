@@ -1,6 +1,8 @@
 package com.shooter.gameobjects;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
 import com.shooter.gameworld.GameWorld;
@@ -17,6 +19,8 @@ public abstract class Person extends DynamicGameObject {
     protected float fireInterval = 0;
 
     protected float health;
+
+    protected Sound fireSound = Gdx.audio.newSound(Gdx.files.internal("sounds/pistol_shoot.mp3"));
 
     public Person(GameWorld gameWorld, Vector2 position){
         super(gameWorld, position);
@@ -35,7 +39,13 @@ public abstract class Person extends DynamicGameObject {
 
         gameWorld.addBullet(getPosition(), getAngle(), bulletCategory);
 
+        fireSound.play();
+
         return true;
+    }
+
+    public float getHealth(){
+        return health;
     }
 
     public void reduceHealth(float deltaHealth){

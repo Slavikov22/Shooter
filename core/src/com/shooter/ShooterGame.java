@@ -2,11 +2,12 @@ package com.shooter;
 
 import com.badlogic.gdx.Game;
 import com.shooter.screens.GameScreen;
+import com.shooter.screens.MenuScreen;
 
 public class ShooterGame extends Game {
 	@Override
 	public void create() {
-		this.setScreen(new GameScreen());
+		setScreen(new MenuScreen(this));
 	}
 
 	@Override

@@ -5,11 +5,13 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.World;
+import com.shooter.ShooterGame;
 import com.shooter.gameobjects.*;
 import com.shooter.helpers.MathHelper;
 import com.shooter.helpers.TiledMapHelper;
 import com.shooter.listeners.ShootListener;
 import com.shooter.removers.GameObjectRemover;
+import com.shooter.screens.GameOverScreen;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -24,6 +26,8 @@ public class GameWorld {
     private final static int VELOCITY_ITERATIONS = 10;
     private final static int POSITION_ITERATIONS = 10;
     private final static float SPAWN_INTERVAL = 5;
+    private final static float SPAWN_COEF = 0.1f;
+    private final static int MAX_ENEMIES = 50;
 
     private int gameWidth;
     private int gameHeight;
@@ -42,6 +46,8 @@ public class GameWorld {
     private ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 
     private GameObjectRemover objectRemover = new GameObjectRemover();
+
+    private float gameTime = 0;
 
     public GameWorld(String mapName){
         map = TiledMapHelper.getTiledMap(mapName);
@@ -63,13 +69,15 @@ public class GameWorld {
 
     public void update(float deltaTime){
         world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
+        gameTime += deltaTime;
+        spawn.setSpawnInterval(SPAWN_INTERVAL - gameTime*SPAWN_COEF);
 
         objectRemover.removeAll();
 
         player.update(deltaTime);
 
         spawn.update(deltaTime);
-        if (spawn.isReady()){
+        if (spawn.isReady() && enemies.size() < MAX_ENEMIES){
             enemies.add(spawn.createEnemy());
         }
 

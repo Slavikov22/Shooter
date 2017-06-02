@@ -3,6 +3,7 @@ package com.shooter.screens;
 import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.shooter.ShooterGame;
 import com.shooter.camera.CameraController;
 import com.shooter.gameworld.GameRenderer;
 import com.shooter.gameworld.GameWorld;
@@ -22,7 +23,11 @@ public class GameScreen implements Screen {
 
     private InputMultiplexer multiplexer;
 
-    public GameScreen(){
+    private ShooterGame game;
+
+    public GameScreen(ShooterGame game){
+        this.game = game;
+
         OrthographicCamera camera = CameraHelper.getCamera();
 
         world = new GameWorld(START_MAP);
@@ -52,6 +57,10 @@ public class GameScreen implements Screen {
         cameraController.update(world.getPlayer().getPosition());
 
         renderer.render();
+
+        if (world.getPlayer().isDead()){
+            game.setScreen(new GameOverScreen(game, world.getPlayer().statistic));
+        }
     }
 
     @Override

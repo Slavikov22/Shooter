@@ -6,6 +6,7 @@ import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.World;
 import com.shooter.gameworld.GameWorld;
 import com.shooter.helpers.MathHelper;
+import com.shooter.player.Statistic;
 
 /**
  * Created by miraj on 19.5.17.
@@ -13,17 +14,20 @@ import com.shooter.helpers.MathHelper;
 public class Player extends Person {
     private final static float FORCE = 200.0f;
     private final static float FIRE_INTERVAL = 0.5f;
-    private final static float HEALTH = 1000.0f;
+
+    public final static float MAX_HEALTH = 250.0f;
 
     public boolean isMovedUp;
     public boolean isMovedLeft;
     public boolean isMovedDown;
     public boolean isMovedRight;
 
+    public Statistic statistic = new Statistic();
+
     public Player(GameWorld gameWorld, Vector2 position){
         super(gameWorld, position);
 
-        health = HEALTH;
+        health = MAX_HEALTH;
 
         Filter filter = new Filter();
         filter.categoryBits = EntityCategory.PLAYER;
@@ -38,6 +42,8 @@ public class Player extends Person {
     public void update(float deltaTime){
         super.update(deltaTime);
 
+        statistic.leave_time += deltaTime;
+
         if (isMovedUp){
             applyForce(new Vector2(0, -FORCE));
         }
@@ -50,5 +56,20 @@ public class Player extends Person {
         if (isMovedRight){
             applyForce(new Vector2(FORCE, 0));
         }
+    }
+
+    @Override
+    public boolean fire(short bulletCategory){
+        if (super.fire(bulletCategory)){
+            statistic.shoots += 1;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public boolean isDead(){
+        return health <= 0;
     }
 }

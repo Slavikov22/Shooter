@@ -14,12 +14,12 @@ public class Enemy extends Person {
     private final static float FIRE_INTERVAL = 1.0f;
     private final static float MOVE_RANGE = 5.0f;
     private final static float FIRE_RANGE = 7.0f;
-    private final static float HEALTH = 20.0f;
+    public final static float MAX_HEALTH = 20.0f;
 
     public Enemy(GameWorld gameWorld, Vector2 position){
         super(gameWorld, position);
 
-        health = HEALTH;
+        health = MAX_HEALTH;
 
         minFireInterval = FIRE_INTERVAL;
     }
@@ -50,6 +50,7 @@ public class Enemy extends Person {
     }
 
     public void moveTo(Vector2 position){
-        applyForce(MathHelper.getVector2byAngle(getAngle(), FORCE));
+        float angle = MathHelper.getAngle(getPosition().x, getPosition().y, position.x, position.y);
+        applyForce(MathHelper.getVector2byAngle(angle, FORCE));
     }
 }
