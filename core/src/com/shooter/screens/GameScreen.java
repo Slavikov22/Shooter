@@ -5,6 +5,8 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.shooter.ShooterGame;
 import com.shooter.camera.CameraController;
+import com.shooter.gameworld.GameController;
+import com.shooter.gameworld.GameInfo;
 import com.shooter.gameworld.GameRenderer;
 import com.shooter.gameworld.GameWorld;
 import com.shooter.helpers.CameraHelper;
@@ -39,8 +41,13 @@ public class GameScreen implements Screen {
 
         multiplexer = new InputMultiplexer();
         multiplexer.addProcessor(new PlayerController(world.getPlayer()));
+        multiplexer.addProcessor(new GameController(world));
         Gdx.input.setInputProcessor(multiplexer);
+    }
 
+    public GameScreen(ShooterGame game, GameInfo gameInfo){
+        this(game);
+        world.setGameInfo(gameInfo);
     }
 
     @Override

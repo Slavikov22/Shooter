@@ -44,4 +44,12 @@ public class Spawn {
     public void setSpawnInterval(float time){
         spawnInterval = Math.max(time, MIN_INTERVAL);
     }
+
+    public void setLastSpawn(float time){
+        lastSpawn = time;
+    }
+
+    public float getLastSpawn(){
+        return lastSpawn;
+    }
 }

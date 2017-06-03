@@ -4,6 +4,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.World;
+import com.shooter.fire.strategy.SingleShoot;
 import com.shooter.gameworld.GameWorld;
 import com.shooter.helpers.MathHelper;
 import com.shooter.player.Statistic;
@@ -13,8 +14,8 @@ import com.shooter.player.Statistic;
  */
 public class Player extends Person {
     private final static float FORCE = 200.0f;
-    private final static float FIRE_INTERVAL = 0.5f;
 
+    public final static float MIN_FIRE_INTERVAL = 0.4f;
     public final static float MAX_HEALTH = 250.0f;
 
     public boolean isMovedUp;
@@ -35,7 +36,7 @@ public class Player extends Person {
 
         fixture.setFilterData(filter);
 
-        minFireInterval = FIRE_INTERVAL;
+        setFireStrategy(new SingleShoot(gameWorld), MIN_FIRE_INTERVAL);
     }
 
     @Override
@@ -61,7 +62,7 @@ public class Player extends Person {
     @Override
     public boolean fire(short bulletCategory){
         if (super.fire(bulletCategory)){
-            statistic.shoots += 1;
+            statistic.shoots += fireStrategy.getNumBullets();
             return true;
         }
         else{

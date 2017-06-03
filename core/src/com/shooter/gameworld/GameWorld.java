@@ -13,6 +13,7 @@ import com.shooter.listeners.ShootListener;
 import com.shooter.removers.GameObjectRemover;
 import com.shooter.screens.GameOverScreen;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -67,6 +68,27 @@ public class GameWorld {
         world.setContactListener(new ShootListener(this));
     }
 
+    public void setGameInfo(GameInfo gameInfo){
+        gameTime = gameInfo.gameTime;
+
+        spawn.setLastSpawn(gameInfo.lastSpawn);
+
+        player.setPosition(gameInfo.playerPosition);
+        player.setAngle(gameInfo.playerAngle);
+        player.setHealth(gameInfo.playerHealth);
+        player.statistic = gameInfo.playerStatistic;
+
+        for (int count = 0; count < gameInfo.enemiesPosition.size(); count++){
+            enemies.add(spawn.createEnemy());
+            enemies.get(count).setPosition(gameInfo.enemiesPosition.get(count));
+            enemies.get(count).setHealth(gameInfo.enemiesHealth.get(count));
+        }
+
+        for (int count = 0; count < gameInfo.bulletsPosition.size(); count++){
+            addBullet(gameInfo.bulletsPosition.get(count), gameInfo.bulletsAngle.get(count), gameInfo.bulletsCategory.get(count));
+        }
+    }
+
     public void update(float deltaTime){
         world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
         gameTime += deltaTime;
@@ -94,8 +116,20 @@ public class GameWorld {
         return world;
     }
 
+    public float getGameTime(){
+        return gameTime;
+    }
+
+    public void setGameTime(float time){
+        gameTime = time;
+    }
+
     public Player getPlayer(){
         return player;
+    }
+
+    public Spawn getSpawn(){
+        return spawn;
     }
 
     public ArrayList<Enemy> getEnemies(){

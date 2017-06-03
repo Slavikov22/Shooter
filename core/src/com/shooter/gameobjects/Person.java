@@ -5,6 +5,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
+import com.shooter.fire.strategy.FireStrategy;
+import com.shooter.fire.strategy.SingleShoot;
 import com.shooter.gameworld.GameWorld;
 import com.shooter.helpers.MathHelper;
 
@@ -15,37 +17,33 @@ public abstract class Person extends DynamicGameObject {
     private final static float RADIUS = 0.5f;
     private final static float LINEAR_DAMPING = 30.0f;
 
-    protected float minFireInterval = 0;
-    protected float fireInterval = 0;
-
     protected float health;
 
-    protected Sound fireSound = Gdx.audio.newSound(Gdx.files.internal("sounds/pistol_shoot.mp3"));
+    protected FireStrategy fireStrategy;
 
     public Person(GameWorld gameWorld, Vector2 position){
         super(gameWorld, position);
     }
 
     public void update(float deltaTime){
-        fireInterval += deltaTime;
+        fireStrategy.update(deltaTime);
     }
 
     public boolean fire(short bulletCategory){
-        if (fireInterval < minFireInterval){
-            return false;
-        }
+        return fireStrategy.fire(getPosition(), getAngle(), bulletCategory);
+    }
 
-        fireInterval = 0;
-
-        gameWorld.addBullet(getPosition(), getAngle(), bulletCategory);
-
-        fireSound.play();
-
-        return true;
+    public void setFireStrategy(FireStrategy fireStrategy, float minInterval){
+        this.fireStrategy = fireStrategy;
+        this.fireStrategy.setMinInterval(minInterval);
     }
 
     public float getHealth(){
         return health;
+    }
+
+    public void setHealth(float health){
+        this.health = health;
     }
 
     public void reduceHealth(float deltaHealth){

@@ -14,8 +14,12 @@ public class Bullet extends DynamicGameObject {
 
     private final static float VELOCITY_MODULE = 50.0f;
 
+    private short categoryBits;
+
     public Bullet(GameWorld gameWorld, Vector2 position, float angle, short categoryBits){
         super(gameWorld, position);
+
+        this.categoryBits = categoryBits;
 
         setAngle(angle);
         setLinearVelocity(MathHelper.getVector2byAngle(angle, VELOCITY_MODULE));
@@ -31,6 +35,10 @@ public class Bullet extends DynamicGameObject {
         }
 
         fixture.setFilterData(filter);
+    }
+
+    public short getCategoryBits(){
+        return categoryBits;
     }
 
     @Override

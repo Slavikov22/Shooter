@@ -2,6 +2,7 @@ package com.shooter.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
@@ -21,7 +22,6 @@ import java.util.Locale;
  * Created by miraj on 1.6.17.
  */
 public class GameOverScreen implements Screen {
-    private final static float LABEL_LEFT = 250;
     private final static float LABEL_WIDTH = 200;
     private final static float LABEL_HEIGHT = 50;
 
@@ -31,7 +31,11 @@ public class GameOverScreen implements Screen {
     private Stage stage;
     private Skin skin;
 
+    private Sound deadSound = Gdx.audio.newSound(Gdx.files.internal("sounds/dead.mp3"));
+
     public GameOverScreen(ShooterGame game, Statistic statistic){
+        deadSound.play();
+
         stage = new Stage();
         Gdx.input.setInputProcessor(stage);
 

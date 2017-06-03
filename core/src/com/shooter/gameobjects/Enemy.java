@@ -3,6 +3,7 @@ package com.shooter.gameobjects;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.World;
+import com.shooter.fire.strategy.SingleShoot;
 import com.shooter.gameworld.GameWorld;
 import com.shooter.helpers.MathHelper;
 
@@ -11,17 +12,19 @@ import com.shooter.helpers.MathHelper;
  */
 public class Enemy extends Person {
     private final static float FORCE = 200.0f;
-    private final static float FIRE_INTERVAL = 1.0f;
     private final static float MOVE_RANGE = 5.0f;
     private final static float FIRE_RANGE = 7.0f;
+
+    public final static float MIN_FIRE_INTERVAL = 1.0f;
     public final static float MAX_HEALTH = 20.0f;
+
 
     public Enemy(GameWorld gameWorld, Vector2 position){
         super(gameWorld, position);
 
         health = MAX_HEALTH;
 
-        minFireInterval = FIRE_INTERVAL;
+        setFireStrategy(new SingleShoot(gameWorld), MIN_FIRE_INTERVAL);
     }
 
     public void update(float deltaTime, Vector2 position){

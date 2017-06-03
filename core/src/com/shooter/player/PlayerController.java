@@ -3,9 +3,12 @@ package com.shooter.player;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
+import com.shooter.fire.strategy.SingleShoot;
+import com.shooter.fire.strategy.TripleShoot;
 import com.shooter.gameobjects.EntityCategory;
 import com.shooter.gameobjects.Player;
 import com.shooter.helpers.CameraHelper;
@@ -16,6 +19,8 @@ import com.shooter.helpers.MathHelper;
  */
 public final class PlayerController extends InputAdapter {
     private Player player;
+
+    private Sound changeWeapon = Gdx.audio.newSound(Gdx.files.internal("sounds/change_pistol.mp3"));
 
     public PlayerController(Player player){
         this.player = player;
@@ -50,6 +55,14 @@ public final class PlayerController extends InputAdapter {
                 break;
             case Input.Keys.D:
                 player.isMovedRight = true;
+                break;
+            case Input.Keys.NUM_1:
+                player.setFireStrategy(new SingleShoot(player.getGameWorld()), Player.MIN_FIRE_INTERVAL);
+                changeWeapon.play();
+                break;
+            case Input.Keys.NUM_2:
+                player.setFireStrategy(new TripleShoot(player.getGameWorld()), Player.MIN_FIRE_INTERVAL);
+                changeWeapon.play();
                 break;
         }
 
