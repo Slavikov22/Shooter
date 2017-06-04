@@ -1,6 +1,8 @@
 package com.shooter;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Pixmap;
 import com.shooter.screens.GameScreen;
 import com.shooter.screens.MenuScreen;
 

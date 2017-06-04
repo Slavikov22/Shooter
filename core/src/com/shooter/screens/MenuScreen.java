@@ -2,9 +2,12 @@ package com.shooter.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -30,6 +33,11 @@ public class MenuScreen implements Screen {
     private TextButton buttonLoad;
     private TextButton buttonExit;
 
+    private Music music = Gdx.audio.newMusic(Gdx.files.internal("sounds/menu1.mp3"));
+
+    private Sprite background;
+    private SpriteBatch spriteBatch = new SpriteBatch();
+
     public MenuScreen(ShooterGame game){
         stage = new Stage();
         Gdx.input.setInputProcessor(stage);
@@ -37,23 +45,28 @@ public class MenuScreen implements Screen {
         skin = new Skin(Gdx.files.internal("menu/uiskin.json"));
 
         buttonPlay = new TextButton("Play", skin);
-        buttonPlay.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2, Gdx.graphics.getHeight() / 2 + 2*BUTTON_HEIGHT);
+        buttonPlay.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2, 380);
         buttonPlay.setSize(BUTTON_WIDTH, BUTTON_HEIGHT);
-        buttonPlay.addListener(new StartListener(game));
+        buttonPlay.addListener(new StartListener(game, music));
 
         buttonLoad = new TextButton("Load", skin);
-        buttonLoad.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2, Gdx.graphics.getHeight() / 2);
+        buttonLoad.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2, 310);
         buttonLoad.setSize(BUTTON_WIDTH, BUTTON_HEIGHT);
-        buttonLoad.addListener(new LoadListener(game));
+        buttonLoad.addListener(new LoadListener(game, music));
 
         buttonExit = new TextButton("Exit", skin);
-        buttonExit.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2, Gdx.graphics.getHeight() / 2 - 2*BUTTON_HEIGHT);
+        buttonExit.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2, 240);
         buttonExit.setSize(BUTTON_WIDTH, BUTTON_HEIGHT);
         buttonExit.addListener(new ExitListener());
 
         stage.addActor(buttonPlay);
         stage.addActor(buttonLoad);
         stage.addActor(buttonExit);
+
+        background = new Sprite(new Texture("images/menu.png"));
+
+        music.setLooping(true);
+        music.play();
     }
 
     @Override
@@ -65,6 +78,10 @@ public class MenuScreen implements Screen {
     public void render(float delta) {
         Gdx.gl.glClearColor(0,0,0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+        spriteBatch.begin();
+        background.draw(spriteBatch);
+        spriteBatch.end();
 
         stage.act(delta);
         stage.draw();

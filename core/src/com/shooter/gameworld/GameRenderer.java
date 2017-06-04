@@ -1,16 +1,13 @@
 package com.shooter.gameworld;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
-import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.shooter.gameobjects.Bullet;
 import com.shooter.gameobjects.Enemy;
-import com.shooter.gameobjects.Views.BulletView;
-import com.shooter.gameobjects.Views.EnemyView;
-import com.shooter.gameobjects.Views.PlayerView;
-import com.shooter.helpers.CameraHelper;
+import com.shooter.gameobjects.views.BulletView;
+import com.shooter.gameobjects.views.EnemyView;
+import com.shooter.gameobjects.views.PlayerView;
 import com.shooter.helpers.TiledMapHelper;
 
 /**
@@ -43,16 +40,16 @@ public class GameRenderer {
         updateMapRenderer();
         mapRenderer.render();
 
+        for (Bullet bullet: world.getBullets()){
+            bulletView.setObject(bullet);
+            bulletView.render();
+        }
+
         playerView.render();
 
         for (Enemy enemy: world.getEnemies()){
             enemyView.setObject(enemy);
             enemyView.render();
-        }
-
-        for (Bullet bullet: world.getBullets()){
-            bulletView.setObject(bullet);
-            bulletView.render();
         }
 
         //box2DDebugRenderer.render(world.getWorld(), camera.combined);

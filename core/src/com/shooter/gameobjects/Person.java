@@ -14,7 +14,7 @@ import com.shooter.helpers.MathHelper;
  * Created by miraj on 19.5.17.
  */
 public abstract class Person extends DynamicGameObject {
-    private final static float RADIUS = 0.5f;
+    private final static float RADIUS = 0.51f;
     private final static float LINEAR_DAMPING = 30.0f;
 
     protected float health;

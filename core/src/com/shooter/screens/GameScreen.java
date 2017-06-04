@@ -1,6 +1,7 @@
 package com.shooter.screens;
 
 import com.badlogic.gdx.*;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.shooter.ShooterGame;
@@ -27,6 +28,8 @@ public class GameScreen implements Screen {
 
     private ShooterGame game;
 
+    private Music music = Gdx.audio.newMusic(Gdx.files.internal("sounds/fon.mp3"));
+
     public GameScreen(ShooterGame game){
         this.game = game;
 
@@ -43,6 +46,9 @@ public class GameScreen implements Screen {
         multiplexer.addProcessor(new PlayerController(world.getPlayer()));
         multiplexer.addProcessor(new GameController(world));
         Gdx.input.setInputProcessor(multiplexer);
+
+        music.setLooping(true);
+        music.play();
     }
 
     public GameScreen(ShooterGame game, GameInfo gameInfo){
@@ -66,6 +72,7 @@ public class GameScreen implements Screen {
         renderer.render();
 
         if (world.getPlayer().isDead()){
+            music.stop();
             game.setScreen(new GameOverScreen(game, world.getPlayer().statistic));
         }
     }
@@ -92,6 +99,5 @@ public class GameScreen implements Screen {
 
     @Override
     public void dispose(){
-
     }
 }

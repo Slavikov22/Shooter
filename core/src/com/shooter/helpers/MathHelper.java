@@ -33,12 +33,16 @@ public class MathHelper {
     }
 
     public static Vector2 getVector2byAngle(float angle, float module){
-        System.out.print(angle);
-        System.out.print(" ");
-        System.out.print(module);
-        System.out.print(" ");
+        if (angle >= Math.PI / 2 + 1e-5){
+            angle -= Math.PI * 2;
+        }
+        else if (angle >= Math.PI / 2 - 1e-5){
+            angle = (float) (((float) Math.PI / 2) - 1e-5);
+        }
 
-
+        if (angle < -1.5f * Math.PI){
+            angle += 2 * Math.PI;
+        }
 
         float x = (float) Math.sqrt(Math.pow(module, 2) / (1 + Math.pow(Math.tan(angle), 2)));
         float y = (float) (x * Math.tan(angle));
@@ -47,10 +51,6 @@ public class MathHelper {
             x = -x;
             y = -y;
         }
-
-        System.out.print(x);
-        System.out.print(" ");
-        System.out.println(y);
 
         return new Vector2(x, y);
     }

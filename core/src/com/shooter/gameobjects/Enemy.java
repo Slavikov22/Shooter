@@ -37,7 +37,7 @@ public class Enemy extends Person {
 
         Filter filter = new Filter();
         filter.categoryBits = EntityCategory.ENEMY;
-        filter.maskBits = EntityCategory.STATIC | EntityCategory.ENEMY | EntityCategory.PLAYER_BULLET;
+        filter.maskBits = EntityCategory.STATIC | EntityCategory.PLAYER | EntityCategory.ENEMY | EntityCategory.PLAYER_BULLET;
 
         fixture.setFilterData(filter);
 
