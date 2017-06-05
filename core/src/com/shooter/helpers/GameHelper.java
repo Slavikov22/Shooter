@@ -1,8 +1,6 @@
 package com.shooter.helpers;
 
 import com.shooter.gameworld.GameInfo;
-import com.shooter.gameworld.GameWorld;
-import com.shooter.player.Statistic;
 
 import java.io.*;
 
@@ -12,7 +10,7 @@ import java.io.*;
 public class GameHelper {
     public final static String PATH = "game";
 
-    public static GameInfo load(){
+    public static GameInfo load() throws FileNotFoundException{
         GameInfo gameInfo = null;
 
         try {
@@ -20,7 +18,6 @@ public class GameHelper {
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             gameInfo = (GameInfo) objectInputStream.readObject();
         }
-        catch (FileNotFoundException e){}
         catch (IOException e){}
         catch (ClassNotFoundException e){}
 

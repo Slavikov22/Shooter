@@ -3,8 +3,6 @@ package com.shooter.listeners;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.shooter.ShooterGame;
-import com.shooter.screens.GameScreen;
 
 /**
  * Created by miraj on 1.6.17.

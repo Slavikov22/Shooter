@@ -3,7 +3,6 @@ package com.shooter.helpers;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.math.Vector3;
 
 /**
  * Created by miraj on 24.5.17.
@@ -44,13 +43,5 @@ public class CameraHelper {
         float coefY = Gdx.graphics.getHeight() / camera.viewportHeight;
 
         return new Vector2(position.x / coefX, position.y / coefY);
-    }
-
-    public static float project(float x){
-        return project(new Vector2(x, 0)).x;
-    }
-
-    public static float unproject(float x){
-        return unproject(new Vector2(x, 0)).x;
     }
 }

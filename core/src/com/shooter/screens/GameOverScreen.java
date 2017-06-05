@@ -68,7 +68,7 @@ public class GameOverScreen implements Screen {
         Button buttonPlay = new TextButton("Play", skin);
         buttonPlay.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2 - 120, 150);
         buttonPlay.setSize(BUTTON_WIDTH, BUTTON_HEIGHT);
-        buttonPlay.addListener(new StartListener(game, null));
+        buttonPlay.addListener(new StartListener(game));
 
         Button buttonExit = new TextButton("Exit", skin);
         buttonExit.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2 + 120, 150);
@@ -118,7 +118,7 @@ public class GameOverScreen implements Screen {
 
     @Override
     public void hide() {
-
+        deadSound.stop();
     }
 
     @Override

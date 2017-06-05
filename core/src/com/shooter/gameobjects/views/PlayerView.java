@@ -24,8 +24,6 @@ public class PlayerView extends View {
     private final static int HEALTH_BAR_HEIGHT = 15;
     private final static int HEALTH_BAR_MARGIN = 30;
 
-    private Player player;
-
     private Sprite healthBar;
     private Sprite boundHealthBar;
 

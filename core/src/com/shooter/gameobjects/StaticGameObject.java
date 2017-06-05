@@ -1,6 +1,5 @@
 package com.shooter.gameobjects;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
 import com.shooter.gameworld.GameWorld;

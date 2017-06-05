@@ -1,14 +1,9 @@
 package com.shooter.gameobjects;
 
-import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
 import com.shooter.fire.strategy.FireStrategy;
-import com.shooter.fire.strategy.SingleShoot;
 import com.shooter.gameworld.GameWorld;
-import com.shooter.helpers.MathHelper;
 
 /**
  * Created by miraj on 19.5.17.

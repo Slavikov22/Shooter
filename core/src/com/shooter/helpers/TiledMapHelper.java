@@ -3,13 +3,11 @@ package com.shooter.helpers;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.PolygonMapObject;
-import com.badlogic.gdx.maps.objects.PolylineMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.math.EarClippingTriangulator;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
-import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.ShortArray;
 import com.shooter.gameobjects.Spawn;
 import com.shooter.gameobjects.StaticGameObject;
@@ -102,14 +100,5 @@ public class TiledMapHelper {
         float posY = (Float) object.getProperties().get("y");
 
         return new Vector2(posX / TILE_SIZE, posY / TILE_SIZE);
-    }
-
-    private static float getObjectAngle(MapObject object){
-        if (object.getProperties().get("rotation") == null){
-            return 0;
-        }
-        else{
-            return (float) Math.toRadians((Float)(object.getProperties().get("rotation")));
-        }
     }
 }

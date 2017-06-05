@@ -12,8 +12,6 @@ import java.util.ArrayList;
  * Created by miraj on 2.6.17.
  */
 public class GameInfo implements Serializable{
-    private transient GameWorld gameWorld;
-
     public float gameTime;
 
     public float lastSpawn;

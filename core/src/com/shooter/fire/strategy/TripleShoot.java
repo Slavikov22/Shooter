@@ -5,8 +5,6 @@ import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
 import com.shooter.gameworld.GameWorld;
 
-import java.util.Random;
-
 /**
  * Created by miraj on 3.6.17.
  */

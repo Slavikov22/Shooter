@@ -45,10 +45,6 @@ public class CameraController {
         camera.update();
     }
 
-    public OrthographicCamera getCamera(){
-        return camera;
-    }
-
     public void setMaxX(float x){
         maxX = x;
     }
@@ -57,7 +53,4 @@ public class CameraController {
         maxY = y;
     }
 
-//    private void setPosition(Vector2 position){
-//        camera.translate(Math.min(Math.max(position.x, screenWidth / 2), ),);
-//    }
 }

@@ -1,30 +1,19 @@
 package com.shooter.gameworld;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.World;
-import com.shooter.ShooterGame;
 import com.shooter.gameobjects.*;
-import com.shooter.helpers.MathHelper;
 import com.shooter.helpers.TiledMapHelper;
 import com.shooter.listeners.ShootListener;
 import com.shooter.removers.GameObjectRemover;
-import com.shooter.screens.GameOverScreen;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by miraj on 13.3.17.
  */
 public class GameWorld {
-    private final static float TILE_SIZE = 1.0f;
     private final static float TIME_STEP = 1.0f / 60.0f;
     private final static int VELOCITY_ITERATIONS = 10;
     private final static int POSITION_ITERATIONS = 10;
@@ -120,10 +109,6 @@ public class GameWorld {
 
     public float getGameTime(){
         return gameTime;
-    }
-
-    public void setGameTime(float time){
-        gameTime = time;
     }
 
     public Player getPlayer(){

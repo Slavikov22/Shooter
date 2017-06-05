@@ -5,14 +5,10 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.shooter.ShooterGame;
 import com.shooter.listeners.ExitListener;
@@ -47,12 +43,12 @@ public class MenuScreen implements Screen {
         buttonPlay = new TextButton("Play", skin);
         buttonPlay.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2, 380);
         buttonPlay.setSize(BUTTON_WIDTH, BUTTON_HEIGHT);
-        buttonPlay.addListener(new StartListener(game, music));
+        buttonPlay.addListener(new StartListener(game));
 
         buttonLoad = new TextButton("Load", skin);
         buttonLoad.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2, 310);
         buttonLoad.setSize(BUTTON_WIDTH, BUTTON_HEIGHT);
-        buttonLoad.addListener(new LoadListener(game, music));
+        buttonLoad.addListener(new LoadListener(game));
 
         buttonExit = new TextButton("Exit", skin);
         buttonExit.setPosition((Gdx.graphics.getWidth() - BUTTON_WIDTH) / 2, 240);
@@ -104,7 +100,7 @@ public class MenuScreen implements Screen {
 
     @Override
     public void hide() {
-
+        music.stop();
     }
 
     @Override

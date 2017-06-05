@@ -1,6 +1,5 @@
 package com.shooter.gameobjects;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
 import com.shooter.gameworld.GameWorld;
@@ -38,10 +37,6 @@ abstract public class GameObject {
 
     public void setPosition(Vector2 position){
         body.setTransform(position, getAngle());
-    }
-
-    public void setPosition(float x, float y){
-        setPosition(new Vector2(x, y));
     }
 
     public float getAngle(){

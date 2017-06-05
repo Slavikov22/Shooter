@@ -9,7 +9,7 @@ import com.shooter.helpers.GameHelper;
  * Created by miraj on 2.6.17.
  */
 public class GameController extends InputAdapter {
-    GameWorld gameWorld;
+    private GameWorld gameWorld;
 
     public GameController(GameWorld gameWorld){
         this.gameWorld = gameWorld;

@@ -2,7 +2,6 @@ package com.shooter.gameobjects;
 
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Filter;
-import com.badlogic.gdx.physics.box2d.World;
 import com.shooter.fire.strategy.SingleShoot;
 import com.shooter.gameworld.GameWorld;
 import com.shooter.helpers.MathHelper;
